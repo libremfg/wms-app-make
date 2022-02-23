@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleSelects",
+    "pageId": "ADYEN Staging",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tsiteChange: (siteId) => {\n\t\tif (!_.isEmpty(siteId)){\n\t\t\tGetSiteWorkCenters.run()\n\t\t}\n\t},\n\tworkCenterChange: (equipmentId) => {\n\t\tif (!_.isEmpty(equipmentId)){\n\t\t\tGetSiteWorkStations.run()\n\t\t}\n\t},\n\tworkCellChange: (equipmentId) => {\n\t\tif (!_.isEmpty(equipmentId)){\n\t\t\tGetEquipmentJobOrders.run()\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "ADYEN Staging_HandleSelects",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_61dba9dd6bd5757f166cc786"
+}
