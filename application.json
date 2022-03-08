@@ -6,6 +6,12 @@
   "color": "#F5D1D1",
   "icon": "bar-graph",
   "slug": "make-stuff",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
   "evaluationVersion": 2,
   "createdAt": {
     "seconds": 1641769978,
