@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_getUserSiteList",
+  "id": "Staging_JS_SiteList.getUserSiteList",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_62158b2bda926877eb276110"
 }

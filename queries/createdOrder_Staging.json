@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_createdOrder",
+  "id": "Staging_FormatCreateJobOrder.createdOrder",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61e914f88e1c833631535cce"
 }

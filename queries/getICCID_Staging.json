@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_getICCID",
+  "id": "Staging_SubLotProperties.getICCID",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61e74eebeb0501052b9fe6c0"
 }

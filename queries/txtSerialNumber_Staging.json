@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_txtSerialNumber",
+  "id": "Staging_LoadBuffers.txtSerialNumber",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61ea2a8d8e1c833631536e54"
 }

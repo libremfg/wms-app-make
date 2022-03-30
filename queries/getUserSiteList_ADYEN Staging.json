@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "ADYEN Staging_getUserSiteList",
+  "id": "ADYEN Staging_JS_SiteList.getUserSiteList",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61dba8516bd5757f166cc772"
 }

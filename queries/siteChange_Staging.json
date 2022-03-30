@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_siteChange",
+  "id": "Staging_HandleSelects.siteChange",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_62158c13da926877eb27611a"
 }

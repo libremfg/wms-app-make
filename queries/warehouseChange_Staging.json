@@ -44,7 +44,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_warehouseChange",
+  "id": "Staging_HandleSelects.warehouseChange",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_62158c13da926877eb276118"
 }

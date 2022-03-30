@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_txtOrderWarehouse",
+  "id": "Staging_LoadBuffers.txtOrderWarehouse",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61ea23c48e1c833631536e09"
 }

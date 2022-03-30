@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_hasSealId",
+  "id": "Staging_SubLotProperties.hasSealId",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61e75016eb0501052b9fe6d4"
 }

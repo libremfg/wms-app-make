@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_getSubLot",
+  "id": "Staging_GetSubLot.getSubLot",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_620de8476b4b1e154a3c4ead"
 }

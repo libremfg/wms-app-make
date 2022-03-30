@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Staging_canCreate",
+  "id": "Staging_ValidateCreateButton.canCreate",
   "deleted": false,
   "gitSyncId": "61db6bfa6bd5757f166cc619_61e4e33ceb0501052b9fc360"
 }
