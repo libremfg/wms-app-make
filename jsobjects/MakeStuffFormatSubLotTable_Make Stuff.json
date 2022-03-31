@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "MakeStuffFormatSubLotTable",
+    "pageId": "Make Stuff",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tformatTable: () => {\n\t\tvar ret = []\n\t\tif (GetJobResponseSubLots.data.data != null){\n\t\t\tfor (let i = 0; i < GetJobResponseSubLots.data.data.getStockOnHand.length; i ++) {\n\t\t\t\n\t\t\t\t\n\t\t\t\tvar sealNumber = \"\"\n\t\t\t\tvar ICCID = \"\"\n\t\t\t\tfor (let j = 0; j < GetJobResponseSubLots.data.data.getStockOnHand[i].materialSubLot.properties.length; j ++) {\n\t\t\t\t\tif (GetJobResponseSubLots.data.data.getStockOnHand[i].materialSubLot.properties[j].name == \"SealNumber\") {\n\t\t\t\t\t\tsealNumber = GetJobResponseSubLots.data.data.getStockOnHand[i].materialSubLot.properties[j].description\n\t\t\t\t\t}\n\t\t\t\t\tif (GetJobResponseSubLots.data.data.getStockOnHand[i].materialSubLot.properties[j].name == \"ICCIDNumber\") {\n\t\t\t\t\t\tICCID = GetJobResponseSubLots.data.data.getStockOnHand[i].materialSubLot.properties[j].description\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tlet line = {\n\t\t\t\t\t\"Serial\": GetJobResponseSubLots.data.data.getStockOnHand[i].materialSubLot.code,\n\t\t\t\t\t\"Seal\": sealNumber,\n\t\t\t\t\t\"ICCID\": ICCID,\n\t\t\t\t\t\"Status\": GetJobResponseSubLots.data.data.getStockOnHand[i].status.code,\n\t\t\t\t\t\"Pallet\": GetJobResponseSubLots.data.data.getStockOnHand[i].carrier.code\n\t\t\t\t}\n\t\t\t\treturn line\n\t\t\t\tret.push(line)\n\t\t\t}\n\t\t\treturn ret\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Make Stuff_MakeStuffFormatSubLotTable",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_6245227dae85b361029c1653"
+}

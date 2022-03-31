@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "GetSubLot",
+    "pageId": "Make Stuff",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetSubLot: () => {\n\t\tGetMaterialSubLot.run()\n\t\tGetMaterialSubLotState.run()\n\t\tcloseModal(\"modalScanBarcode\")\n\t}\n}",
+    "variables": []
+  },
+  "id": "Make Stuff_GetSubLot",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_620de8476b4b1e154a3c4eb1"
+}

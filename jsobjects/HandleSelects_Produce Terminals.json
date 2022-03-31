@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleSelects",
+    "pageId": "Produce Terminals",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tsiteChange: (siteId) => {\n\t\tif(!_.isEmpty(siteId)){\n\t\t\tGetSiteWarehouses.run()\n\t\t}\n\t},\n\twarehouseChange: (warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tQueryJobOrdersWarehouse.run()\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Produce Terminals_HandleSelects",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_62158bf0da926877eb276116"
+}

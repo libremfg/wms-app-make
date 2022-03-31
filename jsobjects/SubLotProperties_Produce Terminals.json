@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "SubLotProperties",
+    "pageId": "Produce Terminals",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tgetICCID: () => {\n\t\tif (GetMaterialSubLot.data.data != null) {\n\t\t\tfor (let i = 0; i < GetMaterialSubLot.data.data.getMaterialSubLot.properties.length; i++) {\n\t\t\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot.properties[i].name == \"ICCIDNumber\") {\n\t\t\t\t\treturn GetMaterialSubLot.data.data.getMaterialSubLot.properties[i].description\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn \"\"\n\t\t\n\t},\n\tgetSeal: () => {\n\t\tif (GetMaterialSubLot.data.data != null) {\n\t\t\tfor (let i = 0; i < GetMaterialSubLot.data.data.getMaterialSubLot.properties.length; i++) {\n\t\t\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot.properties[i].name == \"SealNumber\") {\n\t\t\t\t\treturn GetMaterialSubLot.data.data.getMaterialSubLot.properties[i].description\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn \"\"\n\t},\n\thasICCIDId: () => {\n\t\tif (GetMaterialSubLot.data.data != null) {\n\t\t\tfor (let i = 0; i < GetMaterialSubLot.data.data.getMaterialSubLot.properties.length; i++) {\n\t\t\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot.properties[i].name == \"ICCIDNumber\") {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn false\n\t},\n\thasSealId: () => {\n\t\tif (GetMaterialSubLot.data.data != null) {\n\t\t\tfor (let i = 0; i < GetMaterialSubLot.data.data.getMaterialSubLot.properties.length; i++) {\n\t\t\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot.properties[i].name == \"SealNumber\") {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn false\n\t},\n\taddPropeties: () => {\n\t\tif (!this.hasSealId) {\n\t\t\tif (!this.hasICCIDId) {\n\t\t\t\tAddSubLotProperty.run()\n\t\t\t}\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Produce Terminals_SubLotProperties",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_61e74eebeb0501052b9fe6c4"
+}
