@@ -16,7 +16,7 @@
     "pageId": "Make Stuff",
     "collectionId": "Make Stuff_MakeStuffLoadBuffers",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (QueryJobOrderDetails.data.data != null) {\n\t\t\treturn QueryJobOrderDetails.data.data.getJobOrder.operationsRequest.equipment.name\n\t\t} else {\n\t\t\treturn \"\"\n\t\t}\n\t}",

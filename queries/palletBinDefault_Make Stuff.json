@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "txtOrderDescription",
-    "fullyQualifiedName": "MakeStuffLoadBuffers.txtOrderDescription",
+    "name": "palletBinDefault",
+    "fullyQualifiedName": "TabSwitch.palletBinDefault",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,16 +14,17 @@
       "userPermissions": []
     },
     "pageId": "Make Stuff",
-    "collectionId": "Make Stuff_MakeStuffLoadBuffers",
+    "collectionId": "Make Stuff_TabSwitch",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (QueryJobOrderDetails.data.data != null) {\n\t\t\treturn QueryJobOrderDetails.data.data.getJobOrder.operationsRequest.operationsDefinition.material.name\n\t\t} else {\n\t\t\treturn \"\"\n\t\t}\n\t}",
+      "body": "async () => {\n\t\t//use async-await or promises\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (QueryJobOrderDetails.data.data != null) {\n\t\t\treturn QueryJobOrderDetails.data.data.getJobOrder.operationsRequest.operationsDefinition.material.name\n\t\t} else {\n\t\t\treturn \"\"\n\t\t}\n\t}"
+      "async () => {\n\t\t//use async-await or promises\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_MakeStuffLoadBuffers.txtOrderDescription",
+  "id": "Make Stuff_TabSwitch.palletBinDefault",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_624523a8ae85b361029c168a"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624667384f1a665b230489af"
 }

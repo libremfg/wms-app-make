@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "FormatMaterialSelect",
+    "pageId": "Make Stuff",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tfilterBackflushed: () => {\n\t\tvar ret = []\n\t\tfor (let i = 0; i < QueryJobOrderDetails.data.data.getJobOrder.operationsSegment.materialSpecifications.length; i++) {\n\t\t\tvar spec = QueryJobOrderDetails.data.data.getJobOrder.operationsSegment.materialSpecifications[i]\n\t\t\tif (spec.isBackFlushed == null) {\n\t\t\t\tvar s = spec.materialUse + \" \" + spec.material.label + \" \" + spec.allowedStates[0].code\n\t\t\t\tlet line = {\n\t\t\t\t\t\"label\": s,\n\t\t\t\t\t\"value\": spec.id\n\t\t\t\t}\n\t\t\t\tret.push(line)\n\t\t\t} else {\n\t\t\t\tif (spec.isBackFlushed == false) {\n\t\t\t\t\ts = spec.materialUse + \" \" + spec.material.label + \" \" + spec.allowedStates[0].code\n\t\t\t\t\tlet line = {\n\t\t\t\t\t\t\"label\": s,\n\t\t\t\t\t\t\"value\": spec.id\n\t\t\t\t\t}\n\t\t\t\t\tret.push(line)\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn ret\n\t}\n}",
+    "variables": []
+  },
+  "id": "Make Stuff_FormatMaterialSelect",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624655294f1a665b230488ce"
+}

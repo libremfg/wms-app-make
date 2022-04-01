@@ -169,6 +169,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Make Stuff_TabSwitch.materialUseDefault": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Make Stuff_GetJobResponseSubLots": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -274,6 +278,10 @@
       "publishedUserSetOnLoad": false
     },
     "Produce Terminals_SubLotProperties.addPropeties": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Make Stuff_FormatMaterialSelect.filterBackflushed": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -396,6 +404,10 @@
     "Produce Terminals_QueryJobOrderDetails": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Make Stuff_GetMaterialSpecification": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Produce Terminals_LoadBuffers.txtOperationsActualQty": {
       "unpublishedUserSetOnLoad": false,
@@ -550,6 +562,10 @@
       "publishedUserSetOnLoad": false
     },
     "Produce Terminals_GetOperationsRequest": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Make Stuff_TabSwitch.palletBinDefault": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
