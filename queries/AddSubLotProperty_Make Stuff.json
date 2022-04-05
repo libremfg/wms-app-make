@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\"subLotUpdate\": {\n    \t\t\"filter\": {\"code\": {\"eq\": InputUnitDetailsBarcode.text}},\n    \t\t\t\"set\": {\"properties\": [\n      \t\t{\n        \t\t\"name\": \"SealNumber\",\n        \t\t\"description\": InputSealNumber.text\n     \t\t \t},\n\t\t\t\t\t{\n        \t\t\"name\": \"ICCIDNumber\",\n        \t\t\"description\": InputSimCardNumber.text\n      \t\t}\n    \t\t]}\n  \t\t}\n\t\t},\n    query: `\nmutation UpdateMaterialSubLot($subLotUpdate:UpdateMaterialSubLotInput!){\n  updateMaterialSubLot (input:$subLotUpdate){\n    materialSubLot {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\"subLotUpdate\": {\n    \t\t\"filter\": {\"code\": {\"eq\": InputUnitDetailsBarcode.text}},\n    \t\t\t\"set\": {\"properties\": [\n      \t\t{\n        \t\t\"name\": inpPropertyName.text,\n        \t\t\"description\": inpPropertyValue.text\n     \t\t \t},\n    \t\t]}\n  \t\t}\n\t\t},\n    query: `\nmutation UpdateMaterialSubLot($subLotUpdate:UpdateMaterialSubLotInput!){\n  updateMaterialSubLot (input:$subLotUpdate){\n    materialSubLot {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\t\"subLotUpdate\": {\n    \t\t\"filter\": {\"code\": {\"eq\": InputUnitDetailsBarcode.text}},\n    \t\t\t\"set\": {\"properties\": [\n      \t\t{\n        \t\t\"name\": \"SealNumber\",\n        \t\t\"description\": InputSealNumber.text\n     \t\t \t},\n\t\t\t\t\t{\n        \t\t\"name\": \"ICCIDNumber\",\n        \t\t\"description\": InputSimCardNumber.text\n      \t\t}\n    \t\t]}\n  \t\t}\n\t\t},\n    query: `\nmutation UpdateMaterialSubLot($subLotUpdate:UpdateMaterialSubLotInput!){\n  updateMaterialSubLot (input:$subLotUpdate){\n    materialSubLot {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\t\"subLotUpdate\": {\n    \t\t\"filter\": {\"code\": {\"eq\": InputUnitDetailsBarcode.text}},\n    \t\t\t\"set\": {\"properties\": [\n      \t\t{\n        \t\t\"name\": inpPropertyName.text,\n        \t\t\"description\": inpPropertyValue.text\n     \t\t \t},\n    \t\t]}\n  \t\t}\n\t\t},\n    query: `\nmutation UpdateMaterialSubLot($subLotUpdate:UpdateMaterialSubLotInput!){\n  updateMaterialSubLot (input:$subLotUpdate){\n    materialSubLot {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

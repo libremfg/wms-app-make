@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "palletBinDefault",
-    "fullyQualifiedName": "TabSwitch.palletBinDefault",
+    "name": "createSubLot",
+    "fullyQualifiedName": "HandleAddSubLot.createSubLot",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,14 +14,14 @@
       "userPermissions": []
     },
     "pageId": "Make Stuff",
-    "collectionId": "Make Stuff_TabSwitch",
+    "collectionId": "Make Stuff_HandleAddSubLot",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.material.inventoryHandlingPolicy.trackByCarrier == true) {\n\t\t\treturn \"Pallet\"\n\t\t} \n\t\treturn \"Bin\"\n\t}",
+      "body": "async () => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tMutationAddInventoryActual.run()\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.material.inventoryHandlingPolicy.trackByCarrier == true) {\n\t\t\treturn \"Pallet\"\n\t\t} \n\t\treturn \"Bin\"\n\t}"
+      "async () => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tMutationAddInventoryActual.run()\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_TabSwitch.palletBinDefault",
+  "id": "Make Stuff_HandleAddSubLot.createSubLot",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_624667384f1a665b230489af"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_62467cc297dde1526a12faa5"
 }

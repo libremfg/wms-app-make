@@ -61,6 +61,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Make Stuff_HandleAddSubLot.addProperty": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Produce Terminals_FormatMaterialUnitDropDowns.isOutputMaterialUse": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -162,6 +166,10 @@
       "publishedUserSetOnLoad": false
     },
     "Produce Terminals_FormatCreateJobOrder.createdOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Make Stuff_HandleAddSubLot.createSubLot": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -470,6 +478,10 @@
       "publishedUserSetOnLoad": false
     },
     "Produce Terminals_LoadBuffers.txtPartGroup": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Make Stuff_CreateMaterialSubLot": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
