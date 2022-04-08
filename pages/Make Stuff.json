@@ -3524,7 +3524,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Planned Qty: {{MakeStuffLoadBuffers.txtOrderPlannedQty()}}",
                       "key": "2uyysjibks",
-                      "rightColumn": 12,
+                      "rightColumn": 8,
                       "textAlign": "LEFT",
                       "widgetId": "te3i8fgyr2",
                       "isVisible": true,
@@ -3549,7 +3549,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "leftColumn": 12,
+                      "leftColumn": 8,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
@@ -3558,7 +3558,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Actual Qty: {{MakeStuffLoadBuffers.txtOrderActualQty()}}",
                       "key": "2uyysjibks",
-                      "rightColumn": 23,
+                      "rightColumn": 19,
                       "textAlign": "LEFT",
                       "widgetId": "77d78g2yyd",
                       "isVisible": true,
@@ -3583,12 +3583,12 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "leftColumn": 23,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Defect Qty: TODO",
                       "key": "2uyysjibks",
-                      "rightColumn": 35,
+                      "rightColumn": 31,
                       "textAlign": "LEFT",
                       "widgetId": "2nex0a23mu",
                       "isVisible": true,
@@ -3613,7 +3613,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "leftColumn": 35,
+                      "leftColumn": 31,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
@@ -3622,7 +3622,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{ListOrders.selectedItem.status}}",
                       "key": "2uyysjibks",
-                      "rightColumn": 48,
+                      "rightColumn": 44,
                       "textAlign": "LEFT",
                       "widgetId": "behytks5aw",
                       "isVisible": true,
@@ -3647,7 +3647,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "leftColumn": 48,
+                      "leftColumn": 44,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
@@ -3656,7 +3656,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Created: {{MakeStuffLoadBuffers.txtOrderCreatedQty()}}",
                       "key": "2uyysjibks",
-                      "rightColumn": 62,
+                      "rightColumn": 58,
                       "textAlign": "LEFT",
                       "widgetId": "ko28rzeix1",
                       "isVisible": true,
