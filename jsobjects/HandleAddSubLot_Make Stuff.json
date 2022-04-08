@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\taddProperty: () => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t},\n\tcreateSubLot: async () => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tMutationAddInventoryActual.run()\n\t}\n}",
+    "body": "export default {\n}",
     "variables": []
   },
   "id": "Make Stuff_HandleAddSubLot",

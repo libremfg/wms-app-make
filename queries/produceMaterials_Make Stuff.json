@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "createSubLot",
-    "fullyQualifiedName": "HandleAddSubLot.createSubLot",
+    "name": "produceMaterials",
+    "fullyQualifiedName": "MakeStuffMutationCompletions.produceMaterials",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,16 @@
       "userPermissions": []
     },
     "pageId": "Make Stuff",
-    "collectionId": "Make Stuff_HandleAddSubLot",
+    "collectionId": "Make Stuff_MakeStuffMutationCompletions",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tMutationAddInventoryActual.run()\n\t}",
+      "body": "() => {\n\t\tif (ProduceMaterials.data.errors != null) {\n\t\t\tshowAlert(ProduceMaterials.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tMutationAddInventoryActual.run()\n\t}"
+      "() => {\n\t\tif (ProduceMaterials.data.errors != null) {\n\t\t\tshowAlert(ProduceMaterials.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_HandleAddSubLot.createSubLot",
+  "id": "Make Stuff_MakeStuffMutationCompletions.produceMaterials",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_62467cc297dde1526a12faa5"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624fa901457aa64da9e0246f"
 }

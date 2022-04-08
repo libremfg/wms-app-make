@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\n\taddInventoryActual: () => {\n\t\tif (MutationAddInventoryActual.data.errors != null) {\n\t\t\tshowAlert(MutationAddInventoryActual.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t},\n}",
+    "body": "export default {\n\n\tproduceMaterials: () => {\n\t\tif (ProduceMaterials.data.errors != null) {\n\t\t\tshowAlert(ProduceMaterials.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t},\n\tconsumeMaterials: () => {\n\t\tif (ConsumeMaterials.data.errors != null) {\n\t\t\tshowAlert(ConsumeMaterials.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t}\n\t\n}",
     "variables": []
   },
   "id": "Make Stuff_MakeStuffMutationCompletions",

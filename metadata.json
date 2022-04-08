@@ -189,14 +189,6 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Make Stuff_HandleAddSubLot.addProperty": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Make Stuff_HandleAddSubLot.createSubLot": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Make Stuff_HandleSelects.siteChange": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -413,7 +405,11 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Make Stuff_MakeStuffMutationCompletions.addInventoryActual": {
+    "Make Stuff_MakeStuffMutationCompletions.consumeMaterials": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Make Stuff_MakeStuffMutationCompletions.produceMaterials": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -442,10 +438,6 @@
       "publishedUserSetOnLoad": false
     },
     "Make Stuff_MakeStuffValidateCreateButton.canCreate": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Make Stuff_MutationAddInventoryActual": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

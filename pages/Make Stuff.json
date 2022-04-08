@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1090,
+          "bottomRow": 1030,
           "containerStyle": "none",
           "snapRows": 66,
           "parentRowSpace": 1,
@@ -855,7 +855,7 @@
                                     },
                                     {
                                       "widgetName": "BtnProducedSerialised",
-                                      "onClick": "{{MutationAddInventoryActual.run(() => MakeStuffMutationCompletions.addInventoryActual(), () => {})}}",
+                                      "onClick": "{{ProduceMaterials.run(() => MakeStuffMutationCompletions.produceMaterials(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "dynamicPropertyPathList": [
                                         {
@@ -1842,6 +1842,7 @@
                                     },
                                     {
                                       "widgetName": "btnProduceMaterials",
+                                      "onClick": "{{ProduceMaterials.run(() => MakeStuffMutationCompletions.produceMaterials(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "displayName": "Button",
                                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -1852,7 +1853,11 @@
                                       "hideCard": false,
                                       "animateLoading": true,
                                       "parentColumnSpace": 6.1015625,
-                                      "dynamicTriggerPathList": [],
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [],
                                       "text": "Produce",
@@ -2490,6 +2495,7 @@
                                     },
                                     {
                                       "widgetName": "btnConsumeMaterials",
+                                      "onClick": "{{ConsumeMaterials.run(() => MakeStuffMutationCompletions.consumeMaterials(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "displayName": "Button",
                                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2500,7 +2506,11 @@
                                       "hideCard": false,
                                       "animateLoading": true,
                                       "parentColumnSpace": 6.1015625,
-                                      "dynamicTriggerPathList": [],
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [],
                                       "text": "Consume",
@@ -2870,7 +2880,7 @@
                                     },
                                     {
                                       "widgetName": "BtnConsumeSerialised",
-                                      "onClick": "{{MutationAddInventoryActual.run(() => MakeStuffMutationCompletions.addInventoryActual(), () => {})}}",
+                                      "onClick": "{{ConsumeMaterials.run(() => MakeStuffMutationCompletions.consumeMaterials(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "dynamicPropertyPathList": [
                                         {
@@ -5946,40 +5956,6 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "width": 812
-            },
-            {
-              "widgetName": "Text8",
-              "displayName": "Text",
-              "iconSVG": "/static/media/icon.97c59b52.svg",
-              "topRow": 103,
-              "bottomRow": 107,
-              "parentRowSpace": 10,
-              "type": "TEXT_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [],
-              "overflow": "NONE",
-              "leftColumn": 31,
-              "dynamicBindingPathList": [
-                {
-                  "key": "text"
-                }
-              ],
-              "truncateButtonColor": "#FFC13D",
-              "text": "{{_.map(ActivateJobOrder.data.data.addJobResponse.jobResponse)[0].id}}",
-              "key": "k6pt62s8td",
-              "rightColumn": 47,
-              "textAlign": "LEFT",
-              "widgetId": "mr1978m401",
-              "isVisible": true,
-              "fontStyle": "BOLD",
-              "textColor": "#231F20",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "fontSize": "PARAGRAPH"
             }
           ]
         },
@@ -6048,7 +6024,6 @@
           "Text5",
           "Text6",
           "Text7",
-          "Text8",
           "TxtConsumePartGroupTitle",
           "TxtConsumePartGroupValue",
           "TxtConsumePartNumberTitle",
