@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "formatOutput",
+    "pageId": "Job Order Manager",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tformatUserSites: () => {\n\t\tlet ret = []\n\t\tif (GetUserSites.data!= null){\n\t\t\tif(GetUserSites.data.data.getUser.hasRole.length > 0){\n\t\t\t\tfor(let i = 0; i < GetUserSites.data.data.getUser.hasRole.length; i++){\n\t\t\t\t\tfor(let j = 0; j < GetUserSites.data.data.getUser.hasRole[i].responsibilities.length; j++){\n\t\t\t\t\t\tlet line = {\n\t\t\t\t\t\t\t\"value\": GetUserSites.data.data.getUser.hasRole[i].responsibilities[j].id,\n\t\t\t\t\t\t\t\"label\": GetUserSites.data.data.getUser.hasRole[i].responsibilities[j].name\n\t\t\t\t\t\t}\n\t\t\t\t\t\tret.push(line)\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\treturn ret\n\t},\n\tformatJobOrderTable: ()=>{\n\t\tlet ret = []\n\t\tif(QueryJobOrdersWarehouse.data.data.getEquipment.jobOrders.length > 0){\n\t\t\tfor(let i = 0; i < QueryJobOrdersWarehouse.data.data.getEquipment.jobOrders.length; i++){\n\t\t\t\tlet input = QueryJobOrdersWarehouse.data.data.getEquipment.jobOrders[i]\n\t\t\t\tlet materialCode = \"\"\n\t\t\t\tlet operationsRequestCode = \"\"\n\t\t\t\tif(input.operationsRequest != null){\n\t\t\t\t\toperationsRequestCode = input.operationsRequest.code\n\t\t\t\t\tif (input.operationsRequest.operationsDefinition != null){\n\t\t\t\t\t\tif (input.operationsRequest.operationsDefinition.material != null){\n\t\t\t\t\t\t\tmaterialCode = input.operationsRequest.operationsDefinition.material.code\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tlet line = {\n\t\t\t\t\t\"id\": input.id,\n\t\t\t\t\t\"name\": input.name,\n\t\t\t\t\t\"dispatchStatus\": input.dispatchStatus,\n\t\t\t\t\t\"materialCode\":materialCode,\n\t\t\t\t\t\"operationsRequestCode\":operationsRequestCode,\n\t\t\t\t\t\"JobOrderQuantity\":input.quantity,\n\t\t\t\t\t\"OperationsRequestQuantity\":input.operationsRequest.quantity\n\t\t\t\t}\n\t\t\t\tret.push(line)\n\t\t\t}\n\t\t}\n\t\treturn ret\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "Job Order Manager_formatOutput",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624f7c22457aa64da9e02079"
+}

@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "addProperty",
-    "fullyQualifiedName": "HandleAddSubLot.addProperty",
+    "name": "HandleJobOrderOperationsVisibility",
+    "fullyQualifiedName": "HandleVisibilities.HandleJobOrderOperationsVisibility",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,16 @@
       "userPermissions": []
     },
     "pageId": "Make Stuff",
-    "collectionId": "Make Stuff_HandleAddSubLot",
+    "collectionId": "Make Stuff_HandleVisibilities",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t}",
+      "body": "() => {\n\t\tif(QueryJobOrderDetails.data.data.getJobOrder.dispatchStatus == \"ACTIVE\"){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t}"
+      "() => {\n\t\tif(QueryJobOrderDetails.data.data.getJobOrder.dispatchStatus == \"ACTIVE\"){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_HandleAddSubLot.addProperty",
+  "id": "Make Stuff_HandleVisibilities.HandleJobOrderOperationsVisibility",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_62467cc297dde1526a12faa7"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624e61d451a8863d6c40575c"
 }

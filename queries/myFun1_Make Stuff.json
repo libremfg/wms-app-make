@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "addProperty",
-    "fullyQualifiedName": "HandleAddSubLot.addProperty",
+    "name": "myFun1",
+    "fullyQualifiedName": "ActivateJobOrderProcess.myFun1",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Make Stuff",
-    "collectionId": "Make Stuff_HandleAddSubLot",
+    "collectionId": "Make Stuff_ActivateJobOrderProcess",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t}",
+      "body": "() => {\n\t\t//write code here\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t}"
+      "() => {\n\t\t//write code here\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_HandleAddSubLot.addProperty",
+  "id": "Make Stuff_ActivateJobOrderProcess.myFun1",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_62467cc297dde1526a12faa7"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624e67c951a8863d6c405822"
 }

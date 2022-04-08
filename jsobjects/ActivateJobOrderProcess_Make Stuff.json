@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "ActivateJobOrderProcess",
+    "pageId": "Make Stuff",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tHandleActivateJobOrder: async () => {\n\t\tActivateJobOrder.run(()=>{\n\t\t\tQueryJobOrderDetails.run();\n\t\t\tstoreValue(\"currentJobResponseID\",ActivateJobOrder.data.data.addJobResponse.jobResponse[0].id);\n\t\t\tcloseModal(\"ActivateOrderModal\")\n\t\t})\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "Make Stuff_ActivateJobOrderProcess",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624e67c951a8863d6c405824"
+}

@@ -1,0 +1,443 @@
+{
+  "unpublishedPage": {
+    "name": "Job Order Manager",
+    "slug": "job-order-manager",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1160,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 830,
+          "containerStyle": "none",
+          "snapRows": 80,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 54,
+          "minHeight": 840,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "lblSite",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.e6c93592.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "overflow": "NONE",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "text": "Site",
+              "key": "6k6xvapc4l",
+              "rightColumn": 2,
+              "textAlign": "LEFT",
+              "widgetId": "bdu8ruoy3b",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "selectSite",
+              "isFilterable": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "selectionType": "SINGLE_SELECT",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 2,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{formatOutput.formatUserSites()}}",
+              "isDisabled": false,
+              "key": "0y01k4tj6l",
+              "isRequired": true,
+              "rightColumn": 14,
+              "widgetId": "4rozhn4xmj",
+              "isVisible": true,
+              "label": "",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "onOptionChange": "{{\nHandleSelects.siteChange(selectSite.selectedOptionValue)}}"
+            },
+            {
+              "widgetName": "lblWarehouse",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.e6c93592.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "overflow": "NONE",
+              "leftColumn": 14,
+              "dynamicBindingPathList": [],
+              "text": "Warehouse",
+              "key": "6k6xvapc4l",
+              "rightColumn": 20,
+              "textAlign": "LEFT",
+              "widgetId": "oqgivkrv2m",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "selectWarehouse",
+              "isFilterable": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "GREEN",
+              "selectionType": "SINGLE_SELECT",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 20,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
+              "placeholderText": "Warehouse",
+              "isDisabled": false,
+              "key": "5na0jzry8c",
+              "isRequired": true,
+              "rightColumn": 40,
+              "widgetId": "6sc4sgvdm2",
+              "isVisible": true,
+              "label": "",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "onOptionChange": "{{HandleSelects.warehouseChange(selectWarehouse.selectedOptionValue)}}"
+            },
+            {
+              "widgetName": "JobOrderTable",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "name",
+                "dispatchStatus",
+                "materialCode",
+                "operationsRequestCode",
+                "JobOrderQuantity",
+                "OperationsRequestQuantity"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 9,
+              "bottomRow": 77,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.dispatchStatus.computedValue"
+                },
+                {
+                  "key": "primaryColumns.materialCode.computedValue"
+                },
+                {
+                  "key": "primaryColumns.operationsRequestCode.computedValue"
+                },
+                {
+                  "key": "primaryColumns.JobOrderQuantity.computedValue"
+                },
+                {
+                  "key": "primaryColumns.OperationsRequestQuantity.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": ""
+                },
+                "name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                  "cellBackground": ""
+                },
+                "dispatchStatus": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "dispatchStatus",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "dispatchStatus",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus))}}",
+                  "cellBackground": ""
+                },
+                "materialCode": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "materialCode",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "materialCode",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}",
+                  "cellBackground": ""
+                },
+                "operationsRequestCode": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "operationsRequestCode",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "operationsRequestCode",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.operationsRequestCode))}}",
+                  "cellBackground": ""
+                },
+                "JobOrderQuantity": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "JobOrderQuantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "JobOrderQuantity",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.JobOrderQuantity))}}",
+                  "cellBackground": ""
+                },
+                "OperationsRequestQuantity": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "OperationsRequestQuantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "OperationsRequestQuantity",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.OperationsRequestQuantity))}}",
+                  "cellBackground": ""
+                }
+              },
+              "delimiter": ",",
+              "key": "ykoe45p12d",
+              "derivedColumns": {},
+              "rightColumn": 60,
+              "textSize": "PARAGRAPH",
+              "widgetId": "h01ky539a6",
+              "isVisibleFilters": true,
+              "tableData": "{{formatOutput.formatJobOrderTable()}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "cellBackground": "",
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            },
+            {
+              "widgetName": "Button1",
+              "onClick": "{{GetUserSites.run()}}",
+              "buttonColor": "#03B365",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca02633.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 40,
+              "dynamicBindingPathList": [],
+              "text": "Load Site",
+              "isDisabled": false,
+              "key": "tftguq2n1o",
+              "rightColumn": 56,
+              "isDefaultClickDisabled": true,
+              "widgetId": "hx42rlsnhe",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "widgetNames": [
+          "Button1",
+          "JobOrderTable",
+          "MainContainer",
+          "lblSite",
+          "lblWarehouse",
+          "selectSite",
+          "selectWarehouse"
+        ],
+        "validOnPageLoadActions": false,
+        "id": "Job Order Manager",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624e6c3951a8863d6c405866"
+}

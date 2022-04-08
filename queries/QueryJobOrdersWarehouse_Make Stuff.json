@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n\tvariables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery QueryJobOrdersWarehouse($warehouse:String!) {\n  queryJobOrder (filter: { dispatchStatus: { eq: CREATED } }){\n    id\n    name\n    dispatchStatus\n    operationsRequest{\n\t\t\tid\n\t\t\tequipment (filter: { name: { eq: $warehouse}}){\n\t\t\t\tid\n\t\t\t}\n      operationsDefinition{\n        material{\n          code\n        }\n      }\n\t\t}\n\t\tjobResponses (first: 1 order: { asc: startDateTime }){\n\t\t\t\tid    \n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n\tvariables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionLabel\n\t\t},\n    query: `\nquery QueryJobOrdersWarehouse($warehouse:String!) {\n  queryJobOrder (filter: { dispatchStatus: { in: [CREATED,ACTIVE] } })@cascade{\n    id\n    name\n    dispatchStatus\n    operationsRequest{\n\t\t\tid\n\t\t\tequipment (filter: { name: { eq: $warehouse}}){\n\t\t\t\tid\n\t\t\t}\n      operationsDefinition{\n        material{\n          code\n        }\n      }\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery QueryJobOrdersWarehouse($warehouse:String!) {\n  queryJobOrder (filter: { dispatchStatus: { eq: CREATED } }){\n    id\n    name\n    dispatchStatus\n    operationsRequest{\n\t\t\tid\n\t\t\tequipment (filter: { name: { eq: $warehouse}}){\n\t\t\t\tid\n\t\t\t}\n      operationsDefinition{\n        material{\n          code\n        }\n      }\n\t\t}\n\t\tjobResponses (first: 1 order: { asc: startDateTime }){\n\t\t\t\tid    \n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n\tvariables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionLabel\n\t\t},\n    query: `\nquery QueryJobOrdersWarehouse($warehouse:String!) {\n  queryJobOrder (filter: { dispatchStatus: { in: [CREATED,ACTIVE] } })@cascade{\n    id\n    name\n    dispatchStatus\n    operationsRequest{\n\t\t\tid\n\t\t\tequipment (filter: { name: { eq: $warehouse}}){\n\t\t\t\tid\n\t\t\t}\n      operationsDefinition{\n        material{\n          code\n        }\n      }\n\t\t}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

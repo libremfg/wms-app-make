@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.material.inventoryHandlingPolicy.trackBySerialNumber == true) {\n\t\t\treturn \"Serialised\"\n\t\t} else {\n\t\t\tvar use = GetMaterialSpecification.data.data.getMaterialSpecification.materialUse\n\t\t\tif (use == \"Consumed\") {\n\t\t\t\treturn \"Consume\"\n\t\t\t} else {\n\t\t\t\treturn \"Produced\"\n\t\t\t}\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.material.inventoryHandlingPolicy.trackBySerialNumber == true) {\n\t\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.materialUse == \"Consumed\") {\n\t\t\t\treturn \"Consume Serialised\"\n\t\t\t}\n\t\t\treturn \"Produce Serialised\"\n\t\t} else {\n\t\t\tvar use = GetMaterialSpecification.data.data.getMaterialSpecification.materialUse\n\t\t\tif (use == \"Consumed\") {\n\t\t\t\treturn \"Consume Non-serialised\"\n\t\t\t} \n\t\t\treturn \"Produced Non-serialised\"\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.material.inventoryHandlingPolicy.trackBySerialNumber == true) {\n\t\t\treturn \"Serialised\"\n\t\t} else {\n\t\t\tvar use = GetMaterialSpecification.data.data.getMaterialSpecification.materialUse\n\t\t\tif (use == \"Consumed\") {\n\t\t\t\treturn \"Consume\"\n\t\t\t} else {\n\t\t\t\treturn \"Produced\"\n\t\t\t}\n\t\t}\n\t}"
+      "() => {\n\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.material.inventoryHandlingPolicy.trackBySerialNumber == true) {\n\t\t\tif (GetMaterialSpecification.data.data.getMaterialSpecification.materialUse == \"Consumed\") {\n\t\t\t\treturn \"Consume Serialised\"\n\t\t\t}\n\t\t\treturn \"Produce Serialised\"\n\t\t} else {\n\t\t\tvar use = GetMaterialSpecification.data.data.getMaterialSpecification.materialUse\n\t\t\tif (use == \"Consumed\") {\n\t\t\t\treturn \"Consume Non-serialised\"\n\t\t\t} \n\t\t\treturn \"Produced Non-serialised\"\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

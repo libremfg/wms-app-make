@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "addProperty",
-    "fullyQualifiedName": "HandleAddSubLot.addProperty",
+    "name": "siteChange",
+    "fullyQualifiedName": "HandleSelects.siteChange",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Make Stuff",
-    "collectionId": "Make Stuff_HandleAddSubLot",
+    "pageId": "Job Order Manager",
+    "collectionId": "Job Order Manager_HandleSelects",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t}",
+      "body": "(siteId) => {\n\t\tif(!_.isEmpty(siteId)){\n\t\t\tGetSiteWarehouses.run()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (GetMaterialSubLot.data.data.getMaterialSubLot == null) {\n\t\t\tCreateMaterialSubLot.run()\n\t\t}\n\t\tAddSubLotProperty.run()\n\t\tGetMaterialSubLot.run()\n\t\tcloseModal(\"modalAddProperty\")\n\t}"
+      "(siteId) => {\n\t\tif(!_.isEmpty(siteId)){\n\t\t\tGetSiteWarehouses.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_HandleAddSubLot.addProperty",
+  "id": "Job Order Manager_HandleSelects.siteChange",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_62467cc297dde1526a12faa7"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624f7f79457aa64da9e020a2"
 }

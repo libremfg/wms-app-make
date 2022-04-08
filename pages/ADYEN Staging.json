@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 53,
+          "version": 54,
           "minHeight": 1292,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -213,13 +213,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.85546875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 5,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{appsmith.store.selectedJobOrder.material.code}}",
                       "key": "ir61ylvtgh",
@@ -230,7 +230,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "oqw3e53enw",
                       "renderMode": "CANVAS",
@@ -249,9 +248,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.85546875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Material",
                       "key": "ir61ylvtgh",
@@ -261,7 +260,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "oqw3e53enw",
                       "renderMode": "CANVAS",
@@ -280,13 +278,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.85546875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 5,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{appsmith.store.selectedJobOrder.code}}",
                       "key": "ir61ylvtgh",
@@ -297,7 +295,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "oqw3e53enw",
                       "renderMode": "CANVAS",
@@ -316,9 +313,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.85546875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Order",
                       "key": "ir61ylvtgh",
@@ -328,7 +325,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "oqw3e53enw",
                       "renderMode": "CANVAS",
@@ -429,9 +425,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Select Job Order",
                       "key": "ir61ylvtgh",
@@ -441,7 +437,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "bfbkd2uw8k",
                       "renderMode": "CANVAS",
@@ -770,9 +765,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Create Order",
                       "key": "ir61ylvtgh",
@@ -782,7 +777,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "lvl23kfrgp",
                       "renderMode": "CANVAS",
@@ -913,24 +907,24 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "ADYEN Staging_GetUserSites",
-              "name": "GetUserSites",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "ADYEN Staging_GetSiteWorkStations",
               "name": "GetSiteWorkStations",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectWorkCenter.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:WorkCell}}){\n\t\t\tvalue:id\n\t\t\tlabel\n\t\t}\n\t}\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "ADYEN Staging_GetUserSites",
+              "name": "GetUserSites",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }
