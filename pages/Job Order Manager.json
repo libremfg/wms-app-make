@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 54,
+          "version": 56,
           "minHeight": 840,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -376,7 +376,8 @@
               "columnSizeMap": {
                 "task": 245,
                 "step": 62,
-                "status": 75
+                "status": 75,
+                "JobOrderQuantity": 159
               }
             },
             {
