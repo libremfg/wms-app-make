@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetSiteWarehouses",
+    "name": "queryPerson",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -25,13 +25,17 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n      children{\n        value:id\n        label:name\n        equipmentLevel\n        children{\n          value:name\n          label:id\n        }\n      }\n\t\t}\n\t}\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n\tvariables: {},\n    query: `\nquery{\n\tqueryPerson{\n\t\tvalue:id\n\t\tlabel:name\n\t}\n}\n    `\n})\n}}",
+      "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
-      ]
+      ],
+      "formData": {
+        "apiContentType": "none"
+      }
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [
@@ -43,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n      children{\n        value:id\n        label:name\n        equipmentLevel\n        children{\n          value:name\n          label:id\n        }\n      }\n\t\t}\n\t}\n}\n    `\n})"
+      "JSON.stringify({\n\tvariables: {},\n    query: `\nquery{\n\tqueryPerson{\n\t\tvalue:id\n\t\tlabel:name\n\t}\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Job Order Manager_GetSiteWarehouses",
+  "id": "Job Order Manager_queryPerson",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_624f79ef457aa64da9e0205d"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_6268b9cfd8480440cf782cce"
 }

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ReopenOrder",
+    "name": "queryOperationsSegment",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -25,7 +25,8 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n  \"input\": {\n    \"filter\":{\n      \"id\": JobOrderTable.selectedRow.id\n    },\n    \"set\": {\n      \"dispatchStatus\": \"PARKED\"\n    }\n  }\n},\n    query: `\nmutation($input:UpdateJobOrderInput!){\n  updateJobOrder(input:$input){\n    jobOrder{\n      dispatchStatus\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n\tvariables:{\n  \"input\": OperationsDefinitionSelect.selectedOptionValue\n},\n    query: `\nquery ($input:ID){\n  getOperationsDefinition(id:$input){\n    segments{\n      label:name\n      value:id\n    }\n  }\n}\n    `\n})\n}}",
+      "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -46,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n  \"input\": {\n    \"filter\":{\n      \"id\": JobOrderTable.selectedRow.id\n    },\n    \"set\": {\n      \"dispatchStatus\": \"PARKED\"\n    }\n  }\n},\n    query: `\nmutation($input:UpdateJobOrderInput!){\n  updateJobOrder(input:$input){\n    jobOrder{\n      dispatchStatus\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n\tvariables:{\n  \"input\": OperationsDefinitionSelect.selectedOptionValue\n},\n    query: `\nquery ($input:ID){\n  getOperationsDefinition(id:$input){\n    segments{\n      label:name\n      value:id\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Job Order Manager_ReopenOrder",
+  "id": "Job Order Manager_queryOperationsSegment",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_62551c4ee52b06350af391ef"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_6268d7bdd8480440cf7832eb"
 }

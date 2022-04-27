@@ -120,6 +120,18 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Job Order Manager_queryOperationsDefinition": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Job Order Manager_queryOperationsSegment": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_queryPerson": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
     "Make Stuff_ActivateJobOrder": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
