@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleSelects",
+    "pageId": "Job Order Manager",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tsiteChange: (siteId) => {\n\t\tif(!_.isEmpty(siteId)){\n\t\t\tGetSiteWarehouses.run()\n\t\t}\n\t},\n\twarehouseChange: (warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tQueryJobOrders.run()\n\t\t}\n\t},\n\thandleCompleteOrderDisability: () => {\n\t\tif(!_.isEmpty(appsmith.store.selectedJobOrderStatus)){\n\t\t\tif (appsmith.store.selectedJobOrderStatus == \"PARKED\"){\n\t\t\t\treturn false\n\t\t\t}else{\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t},\n\thandleCloseOrderDisability: () => {\n\t\tif(!_.isEmpty(appsmith.store.selectedJobOrderStatus)){\n\t\t\tif (appsmith.store.selectedJobOrderStatus == \"COMPLETE\"){\n\t\t\t\treturn false\n\t\t\t}else{\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t},\n\thandleReopenOrderDisability: () => {\n\t\tif(!_.isEmpty(appsmith.store.selectedJobOrderStatus)){\n\t\t\tif (appsmith.store.selectedJobOrderStatus == \"CLOSED\"){\n\t\t\t\treturn false\n\t\t\t}else{\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Job Order Manager_HandleSelects",
+  "deleted": false,
+  "gitSyncId": "61db6bfa6bd5757f166cc619_624f7f79457aa64da9e020a6"
+}

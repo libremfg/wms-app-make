@@ -1,7 +1,6 @@
 {
-  "fileFormatVersion": 1,
   "clientSchemaVersion": 1,
-  "serverSchemaVersion": 3,
+  "serverSchemaVersion": 4,
   "publishedDefaultPageName": "ADYEN Staging",
   "unpublishedDefaultPageName": "ADYEN Staging",
   "invisibleActionFields": {
@@ -45,6 +44,14 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Job Order Manager_CloseOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_CompleteOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Job Order Manager_GetSiteWarehouses": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -52,6 +59,18 @@
     "Job Order Manager_GetUserSites": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Job Order Manager_HandleSelects.handleCloseOrderDisability": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_HandleSelects.handleCompleteOrderDisability": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_HandleSelects.handleReopenOrderDisability": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Job Order Manager_HandleSelects.siteChange": {
       "unpublishedUserSetOnLoad": false,
@@ -61,11 +80,39 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Job Order Manager_QueryJobOrdersWarehouse": {
+    "Job Order Manager_QueryJobOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_QueryJobResponses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_ReopenOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_UpdateJobResponseDateTime": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_formatOutput.formatEquipmentActualOutput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_formatOutput.formatJobOrderFilter": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Job Order Manager_formatOutput.formatJobOrderTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_formatOutput.formatMaterialActualOutput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Job Order Manager_formatOutput.formatPersonnelOutput": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -738,18 +785,22 @@
       "publishedUserSetOnLoad": false
     }
   },
-  "editModeTheme": {
-    "name": "Classic",
-    "displayName": "Classic",
-    "isSystemTheme": true,
-    "deleted": false
-  },
   "publishedTheme": {
     "name": "Classic",
     "displayName": "Classic",
     "isSystemTheme": true,
-    "deleted": false
+    "deleted": false,
+    "policies": [
+      {
+        "permission": "read:themes",
+        "users": [
+          "anonymousUser"
+        ],
+        "groups": []
+      }
+    ]
   },
   "publishedLayoutmongoEscapedWidgets": {},
-  "unpublishedLayoutmongoEscapedWidgets": {}
+  "unpublishedLayoutmongoEscapedWidgets": {},
+  "fileFormatVersion": 2
 }
