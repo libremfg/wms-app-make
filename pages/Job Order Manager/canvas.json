@@ -45,7 +45,7 @@
               ],
               "shouldTruncate": false,
               "truncateButtonColor": "#FFC13D",
-              "text": "Carrier: {{GetStockOnHandByCarrierTable.selectedRow.carrier}}",
+              "text": "Carrier: {{FromDateTimePicker.formattedDate}}",
               "key": "3kwosrc2w6",
               "rightColumn": 63,
               "textAlign": "LEFT",
@@ -2316,9 +2316,9 @@
               "onOptionChange": "{{QueryJobOrders.run()}}"
             },
             {
-              "widgetName": "DatePicker1",
+              "widgetName": "FromDateTimePicker",
               "minDate": "1920-12-31T18:30:00.000Z",
-              "dateFormat": "YYYY-MM-DD HH:mm",
+              "dateFormat": "YYYY-MM-DDTHH:mm:ss.sssZ",
               "displayName": "DatePicker",
               "iconSVG": "/static/media/icon.300e5ab8.svg",
               "topRow": 5,
@@ -2329,13 +2329,17 @@
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 19.8125,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDateSelected"
+                }
+              ],
               "leftColumn": 22,
               "dynamicBindingPathList": [],
               "isDisabled": false,
               "key": "kf0stmqbox",
+              "onDateSelected": "{{QueryJobOrders.run()}}",
               "isRequired": false,
-              "defaultDate": "2022-04-13T23:36:10.917Z",
               "rightColumn": 31,
               "widgetId": "d52chn5m4c",
               "isVisible": true,
@@ -2351,7 +2355,7 @@
               "maxDate": "2121-12-31T18:29:00.000Z"
             },
             {
-              "widgetName": "DatePicker2",
+              "widgetName": "ToDateTimePicker",
               "minDate": "1920-12-31T18:30:00.000Z",
               "dateFormat": "YYYY-MM-DD HH:mm",
               "displayName": "DatePicker",
@@ -2364,11 +2368,12 @@
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
               "leftColumn": 31,
+              "dynamicBindingPathList": [],
               "isDisabled": false,
               "key": "kf0stmqbox",
               "isRequired": false,
-              "defaultDate": "2022-04-13T23:36:10.917Z",
               "rightColumn": 40,
               "widgetId": "thm261wfcl",
               "isVisible": true,
@@ -2378,7 +2383,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "timePrecision": "minute",
+              "timePrecision": "None",
               "firstDayOfWeek": 0,
               "closeOnSelection": true,
               "maxDate": "2121-12-31T18:29:00.000Z"
@@ -2737,10 +2742,9 @@
           "Canvas6",
           "Canvas7",
           "Container1",
-          "DatePicker1",
-          "DatePicker2",
           "EndDatePicker",
           "EquipmentTreeSelect",
+          "FromDateTimePicker",
           "IconButton1",
           "JobOrderDetailModal",
           "JobOrderTable",
@@ -2771,6 +2775,7 @@
           "Text7",
           "Text8",
           "Text9",
+          "ToDateTimePicker",
           "lblSite",
           "selectSite"
         ],
