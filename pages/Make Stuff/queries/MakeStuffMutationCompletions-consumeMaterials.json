@@ -16,12 +16,12 @@
     "pageId": "Make Stuff",
     "collectionId": "Make Stuff_MakeStuffMutationCompletions",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (ConsumeMaterials.data.errors != null) {\n\t\t\tshowAlert(ConsumeMaterials.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

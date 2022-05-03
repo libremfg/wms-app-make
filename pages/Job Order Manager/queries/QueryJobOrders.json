@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n\tvariables: {\n \"input\": formatOutput.formatJobOrderFilter()\n},\n    query: `\nquery ($input: JobOrderDetailedFilter) {\n  queryJobOrdersWithFilter(input: $input) {\n    id\n    name\n\t\t\tcreatedDateTime\n    dispatchStatus\n    quantity\n    quantityUoM {\n      code\n    }\n    operationsRequest {\n      id\n      code\n      quantity\n      actualProducedQuantity\n      quantityUoM {\n        code\n      }\n      operationsDefinition {\n        material {\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n\tvariables: {\n \"input\": formatOutput.formatJobOrderFilter()\n},\n    query: `\nquery ($input: JobOrderDetailedFilter) {\n  queryJobOrdersWithFilter(input: $input) {\n    id\n    name\n\t\t\tcreatedDateTime\n    dispatchStatus\n    quantity\n    quantityUoM {\n      code\n    }\n\t\ttargetQuantity{\n\t\t\tquantity\n\t\t}\n\t\tactualQuantity{\n\t\t\tquantity\n\t\t}\n    operationsRequest {\n      id\n      code\n      quantity\n      actualProducedQuantity\n      quantityUoM {\n        code\n      }\n      operationsDefinition {\n        material {\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -45,7 +45,7 @@
     ],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables: {\n \"input\": formatOutput.formatJobOrderFilter()\n},\n    query: `\nquery ($input: JobOrderDetailedFilter) {\n  queryJobOrdersWithFilter(input: $input) {\n    id\n    name\n\t\t\tcreatedDateTime\n    dispatchStatus\n    quantity\n    quantityUoM {\n      code\n    }\n    operationsRequest {\n      id\n      code\n      quantity\n      actualProducedQuantity\n      quantityUoM {\n        code\n      }\n      operationsDefinition {\n        material {\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n\tvariables: {\n \"input\": formatOutput.formatJobOrderFilter()\n},\n    query: `\nquery ($input: JobOrderDetailedFilter) {\n  queryJobOrdersWithFilter(input: $input) {\n    id\n    name\n\t\t\tcreatedDateTime\n    dispatchStatus\n    quantity\n    quantityUoM {\n      code\n    }\n\t\ttargetQuantity{\n\t\t\tquantity\n\t\t}\n\t\tactualQuantity{\n\t\t\tquantity\n\t\t}\n    operationsRequest {\n      id\n      code\n      quantity\n      actualProducedQuantity\n      quantityUoM {\n        code\n      }\n      operationsDefinition {\n        material {\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

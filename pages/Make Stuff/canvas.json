@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 56,
+          "version": 57,
           "minHeight": 1000,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -3084,7 +3084,7 @@
                         }
                       ],
                       "key": "5pu2s27rk8",
-                      "rightColumn": 28.9811320754717,
+                      "rightColumn": 29,
                       "widgetId": "772z4tjmba",
                       "defaultTab": "{{TabSwitch.materialUseDefault()}}",
                       "shouldShowTabs": true,

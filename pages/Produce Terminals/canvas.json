@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 53,
+          "version": 57,
           "minHeight": 890,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -36,6 +36,7 @@
               "hideCard": false,
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
+              "overflow": "NONE",
               "leftColumn": 0,
               "dynamicBindingPathList": [],
               "text": "Site",
@@ -107,6 +108,7 @@
               "hideCard": false,
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
+              "overflow": "NONE",
               "leftColumn": 15,
               "dynamicBindingPathList": [],
               "text": "Warehouse",
@@ -225,13 +227,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Order: {{LoadBuffers.txtOrderTitle()}}",
                       "key": "2uyysjibks",
@@ -241,7 +243,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -260,13 +261,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 17,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Warehouse: {{LoadBuffers.txtOrderWarehouse()}}",
                       "key": "2uyysjibks",
@@ -276,7 +277,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -295,13 +295,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Part: {{LoadBuffers.txtOrderPart()}}",
                       "key": "2uyysjibks",
@@ -311,7 +311,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -330,13 +329,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Desc: {{LoadBuffers.txtOrderDescription()}}",
                       "key": "2uyysjibks",
@@ -346,7 +345,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -365,13 +363,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Planned Qty: {{LoadBuffers.txtOrderPlannedQty()}}",
                       "key": "2uyysjibks",
@@ -381,7 +379,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -400,13 +397,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 12,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Actual Qty: {{LoadBuffers.txtOrderActualQty()}}",
                       "key": "2uyysjibks",
@@ -416,7 +413,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -435,9 +431,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 23,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Defect Qty: TODO",
                       "key": "2uyysjibks",
@@ -447,7 +443,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -466,13 +461,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{ListOrders.selectedItem.status}}",
                       "key": "2uyysjibks",
@@ -482,7 +477,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -501,13 +495,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Created: {{LoadBuffers.txtOrderCreatedQty()}}",
                       "key": "2uyysjibks",
@@ -517,7 +511,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
@@ -630,13 +623,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtSerialNumber()}}",
                       "key": "2uyysjibks",
@@ -646,7 +639,6 @@
                       "isVisible": true,
                       "fontStyle": "",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -665,9 +657,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Serial Number",
                       "key": "2uyysjibks",
@@ -677,7 +669,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -697,13 +688,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtPartNumber()}}",
                       "key": "2uyysjibks",
@@ -713,7 +704,6 @@
                       "isVisible": true,
                       "fontStyle": "",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -732,9 +722,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Unit Details",
                       "key": "2uyysjibks",
@@ -744,7 +734,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -763,9 +752,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Part Group",
                       "key": "2uyysjibks",
@@ -775,7 +764,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -795,13 +783,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtPartGroup()}}\n",
                       "key": "2uyysjibks",
@@ -811,7 +799,6 @@
                       "isVisible": true,
                       "fontStyle": "",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -830,9 +817,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Part Number",
                       "key": "2uyysjibks",
@@ -842,7 +829,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -861,9 +847,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "SIM Card Number",
                       "key": "2uyysjibks",
@@ -873,7 +859,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -937,9 +922,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Seal Number",
                       "key": "2uyysjibks",
@@ -949,7 +934,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -1140,9 +1124,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Pallet Label",
                       "key": "j3qx6llvv5",
@@ -1152,7 +1136,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -1209,9 +1192,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Status",
                       "key": "8cgm79iijo",
@@ -1221,7 +1204,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -1240,13 +1222,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtSerialStatus()}}",
                       "key": "8cgm79iijo",
@@ -1256,7 +1238,6 @@
                       "isVisible": true,
                       "fontStyle": "",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
@@ -1413,9 +1394,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 8.46484375,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Received Details",
                       "key": "2uyysjibks",
@@ -1425,7 +1406,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "mm0vrsp053",
                       "renderMode": "CANVAS",
@@ -1753,9 +1733,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Create Job Order",
                       "key": "03ynqeoade",
@@ -1765,7 +1745,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
@@ -1825,13 +1804,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 11.875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Operations Definition: {{LoadBuffers.txtOperationsDefinition()}}",
                       "key": "03ynqeoade",
@@ -1841,7 +1820,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
@@ -1860,13 +1838,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 11.875,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Operations Request: {{LoadBuffers.txtOperationsRequest()}}",
                       "key": "03ynqeoade",
@@ -1876,7 +1854,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
@@ -1939,13 +1916,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 5.28125,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Planned Qty: {{LoadBuffers.txtOperationsPlannedQty()}}",
                       "key": "03ynqeoade",
@@ -1955,7 +1932,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
@@ -2015,13 +1991,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 5.28125,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
                         }
                       ],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Actual Quantity: {{LoadBuffers.txtOperationsActualQty()}}",
                       "key": "03ynqeoade",
@@ -2031,7 +2007,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
@@ -2081,9 +2056,9 @@
                       "animateLoading": true,
                       "parentColumnSpace": 5.28125,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Order Number:",
                       "key": "03ynqeoade",
@@ -2093,7 +2068,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
@@ -2250,9 +2224,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Input Barcode",
                       "key": "8cgm79iijo",
@@ -2262,7 +2236,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "don9rhxpw9",
                       "renderMode": "CANVAS",
@@ -2871,13 +2844,13 @@
                                       "animateLoading": true,
                                       "parentColumnSpace": 5.1178741455078125,
                                       "dynamicTriggerPathList": [],
+                                      "overflow": "NONE",
                                       "leftColumn": 1,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "text"
                                         }
                                       ],
-                                      "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Order Number: {{currentItem.name }}",
                                       "key": "2uyysjibks",
@@ -2918,7 +2891,6 @@
                                       "isVisible": true,
                                       "fontStyle": "BOLD",
                                       "textColor": "#231F20",
-                                      "shouldScroll": false,
                                       "version": 1,
                                       "parentId": "x076jncnuo",
                                       "renderMode": "CANVAS",
@@ -2937,13 +2909,13 @@
                                       "animateLoading": true,
                                       "parentColumnSpace": 5.1178741455078125,
                                       "dynamicTriggerPathList": [],
+                                      "overflow": "NONE",
                                       "leftColumn": 45,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "text"
                                         }
                                       ],
-                                      "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "{{currentItem.dispatchStatus}}",
                                       "key": "2uyysjibks",
@@ -2984,7 +2956,6 @@
                                       "isVisible": true,
                                       "fontStyle": "BOLD",
                                       "textColor": "#231F20",
-                                      "shouldScroll": false,
                                       "version": 1,
                                       "parentId": "x076jncnuo",
                                       "renderMode": "CANVAS",
@@ -3003,13 +2974,13 @@
                                       "animateLoading": true,
                                       "parentColumnSpace": 12.058486938476562,
                                       "dynamicTriggerPathList": [],
+                                      "overflow": "NONE",
                                       "leftColumn": 1,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "text"
                                         }
                                       ],
-                                      "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Material: {{currentItem.operationsRequest.operationsDefinition.material.code}}",
                                       "key": "gwdom5q9wq",
@@ -3050,7 +3021,6 @@
                                       "isVisible": true,
                                       "fontStyle": "BOLD",
                                       "textColor": "#231F20",
-                                      "shouldScroll": false,
                                       "version": 1,
                                       "parentId": "x076jncnuo",
                                       "renderMode": "CANVAS",
@@ -3141,9 +3111,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Job Orders",
                       "key": "q5c75y5h9n",
@@ -3153,7 +3123,6 @@
                       "isVisible": true,
                       "fontStyle": "BOLD",
                       "textColor": "#231F20",
-                      "shouldScroll": false,
                       "version": 1,
                       "parentId": "7u1rrx2rp7",
                       "renderMode": "CANVAS",
