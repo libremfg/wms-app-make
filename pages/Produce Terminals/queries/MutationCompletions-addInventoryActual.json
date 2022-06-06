@@ -16,7 +16,7 @@
     "pageId": "Produce Terminals",
     "collectionId": "Produce Terminals_MutationCompletions",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (MutationAddInventoryActual.data.errors != null) {\n\t\t\tshowAlert(MutationAddInventoryActual.data.errors[0].message)\n\t\t} else {\n\t\t\tGetJobResponseSubLots.run()\n\t\t}\n\t}",
@@ -42,5 +42,5 @@
   },
   "id": "Produce Terminals_MutationCompletions.addInventoryActual",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_621314b66b4b1e154a3f2561"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_628afa847901344ba8d1a953"
 }

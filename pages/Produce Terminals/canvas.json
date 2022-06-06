@@ -19,13 +19,14 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 57,
+          "version": 59,
           "minHeight": 890,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
+              "boxShadow": "none",
               "widgetName": "lblSite",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.e6c93592.svg",
@@ -37,10 +38,12 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [],
               "text": "Site",
               "key": "6k6xvapc4l",
+              "labelTextSize": "0.875rem",
               "rightColumn": 2,
               "textAlign": "LEFT",
               "widgetId": "lrrrsky187",
@@ -51,9 +54,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "selectSite",
               "isFilterable": false,
               "dynamicPropertyPathList": [
@@ -81,23 +86,30 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{JS_SiteList.getUserSiteList().map((row)=> {return {label:row.name, value:row.id}})}}",
               "isDisabled": false,
               "key": "0y01k4tj6l",
+              "labelTextSize": "0.875rem",
               "isRequired": true,
               "rightColumn": 15,
               "widgetId": "ngwmc8fafq",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "label": "",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{\nHandleSelects.siteChange(selectSite.selectedOptionValue)}}"
             },
             {
+              "boxShadow": "none",
               "widgetName": "lblWarehouse",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.e6c93592.svg",
@@ -109,10 +121,12 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 15,
               "dynamicBindingPathList": [],
               "text": "Warehouse",
               "key": "6k6xvapc4l",
+              "labelTextSize": "0.875rem",
               "rightColumn": 21,
               "textAlign": "LEFT",
               "widgetId": "1v8eor28f2",
@@ -123,9 +137,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "selectWarehouse",
               "isFilterable": false,
               "dynamicPropertyPathList": [
@@ -153,29 +169,39 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
               "placeholderText": "Warehouse",
               "isDisabled": false,
               "key": "5na0jzry8c",
+              "labelTextSize": "0.875rem",
               "isRequired": true,
               "rightColumn": 41,
               "widgetId": "qkst4p9unx",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "label": "",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{\nHandleSelects.warehouseChange(selectWarehouse.selectedOptionValue)}}"
             },
             {
-              "boxShadow": "NONE",
+              "boxShadow": "none",
               "widgetName": "CtnOrderInformation",
               "borderColor": "transparent",
               "isCanvas": true,
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 4,
@@ -194,28 +220,21 @@
               ],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas3",
-                  "rightColumn": 481.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "8h7htua2c6",
-                  "containerStyle": "none",
                   "topRow": 0,
                   "bottomRow": 390,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "esu4kug6aw",
                   "minHeight": 400,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderTitle",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -228,6 +247,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -237,6 +257,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Order: {{LoadBuffers.txtOrderTitle()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 17,
                       "textAlign": "LEFT",
                       "widgetId": "2ml3udkszg",
@@ -247,9 +268,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING3"
+                      "borderRadius": "0px",
+                      "fontSize": "1rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderWarehouse",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -262,6 +285,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 17,
                       "dynamicBindingPathList": [
                         {
@@ -271,6 +295,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Warehouse: {{LoadBuffers.txtOrderWarehouse()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 35,
                       "textAlign": "LEFT",
                       "widgetId": "g7ji8fnurt",
@@ -281,9 +306,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING3"
+                      "borderRadius": "0px",
+                      "fontSize": "1rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderPart",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -296,6 +323,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
@@ -305,6 +333,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Part: {{LoadBuffers.txtOrderPart()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 48,
                       "textAlign": "LEFT",
                       "widgetId": "s53uaro2no",
@@ -315,9 +344,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING3"
+                      "borderRadius": "0px",
+                      "fontSize": "1rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderPartDesc",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -330,6 +361,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
@@ -339,6 +371,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Desc: {{LoadBuffers.txtOrderDescription()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "textAlign": "LEFT",
                       "widgetId": "0oemhyga6u",
@@ -349,9 +382,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING3"
+                      "borderRadius": "0px",
+                      "fontSize": "1rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderPlannedQty",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -364,6 +399,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -373,6 +409,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Planned Qty: {{LoadBuffers.txtOrderPlannedQty()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 12,
                       "textAlign": "LEFT",
                       "widgetId": "te3i8fgyr2",
@@ -383,9 +420,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderActualQty",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -398,6 +437,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 12,
                       "dynamicBindingPathList": [
                         {
@@ -407,6 +447,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Actual Qty: {{LoadBuffers.txtOrderActualQty()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 23,
                       "textAlign": "LEFT",
                       "widgetId": "77d78g2yyd",
@@ -417,9 +458,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderDefectQty",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -432,11 +475,13 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 23,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Defect Qty: TODO",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 35,
                       "textAlign": "LEFT",
                       "widgetId": "2nex0a23mu",
@@ -447,9 +492,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderState",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -462,6 +509,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
@@ -471,6 +519,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{ListOrders.selectedItem.status}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 48,
                       "textAlign": "LEFT",
                       "widgetId": "behytks5aw",
@@ -481,9 +530,11 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOrderCreatedQty",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -496,6 +547,7 @@
                       "parentColumnSpace": 13.1669921875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
@@ -505,6 +557,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Created: {{LoadBuffers.txtOrderCreatedQty()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "textAlign": "LEFT",
                       "widgetId": "ko28rzeix1",
@@ -515,14 +568,27 @@
                       "parentId": "8h7htua2c6",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     }
                   ],
-                  "key": "ob0gz3ix3m"
+                  "key": "ob0gz3ix3m",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 481.5,
+                  "detachFromLayout": true,
+                  "widgetId": "8h7htua2c6",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "esu4kug6aw",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "borderWidth": "0",
               "key": "56mijox8cg",
+              "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 51,
               "widgetId": "esu4kug6aw",
@@ -532,14 +598,18 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "0px"
             },
             {
-              "boxShadow": "NONE",
+              "boxShadow": "none",
               "widgetName": "CtnUnitDetails",
               "borderColor": "transparent",
               "isCanvas": true,
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 18,
@@ -558,28 +628,21 @@
               ],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas4",
-                  "rightColumn": 481.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "n73kppw6a3",
-                  "containerStyle": "none",
                   "topRow": 0,
                   "bottomRow": 720,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "eb81pvnfzp",
                   "minHeight": 400,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnPrintUnitDetails",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -598,6 +661,7 @@
                       "text": "Print",
                       "isDisabled": true,
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "1gj74popxq",
@@ -607,10 +671,12 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtSerialNumberValue",
                       "dynamicPropertyPathList": [],
                       "displayName": "Text",
@@ -624,6 +690,7 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
@@ -633,6 +700,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtSerialNumber()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "textAlign": "LEFT",
                       "widgetId": "ibtbnb77nv",
@@ -643,10 +711,17 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtSerialNumberTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 21,
@@ -658,11 +733,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Serial Number",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
                       "widgetId": "2n07jxn06e",
@@ -673,9 +750,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtPartNumberValue",
                       "dynamicPropertyPathList": [],
                       "displayName": "Text",
@@ -689,6 +768,7 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
@@ -698,6 +778,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtPartNumber()}}",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "textAlign": "LEFT",
                       "widgetId": "jz1ewjpfwu",
@@ -708,10 +789,17 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtUnitDetailsTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 0,
@@ -723,11 +811,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Unit Details",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 43,
                       "textAlign": "LEFT",
                       "widgetId": "mftpq5wpk3",
@@ -738,10 +828,17 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING2"
+                      "borderRadius": "0px",
+                      "fontSize": "1.125rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtPartGroupTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 13,
@@ -753,11 +850,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Part Group",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
                       "widgetId": "2dwfj08omc",
@@ -768,9 +867,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtPartGroupValue",
                       "dynamicPropertyPathList": [],
                       "displayName": "Text",
@@ -784,6 +885,7 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
@@ -793,6 +895,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtPartGroup()}}\n",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "textAlign": "LEFT",
                       "widgetId": "bx0ms3119r",
@@ -803,10 +906,17 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtPartNumberTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 17,
@@ -818,11 +928,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Part Number",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
                       "widgetId": "y010hcaada",
@@ -833,10 +945,17 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtSimCardNumberTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 29,
@@ -848,11 +967,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "SIM Card Number",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 35,
                       "textAlign": "LEFT",
                       "widgetId": "izxyq4uqeh",
@@ -863,9 +984,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "InputSimCardNumber",
                       "dynamicPropertyPathList": [
                         {
@@ -891,15 +1014,20 @@
                         },
                         {
                           "key": "isDisabled"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": "{{SubLotProperties.hasICCIDId()}}",
                       "key": "y44zml9w1i",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 64,
                       "widgetId": "4ypg5f3h9b",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -907,11 +1035,18 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": "{{SubLotProperties.getICCID()}}"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtSealNumberTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 37,
@@ -923,11 +1058,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Seal Number",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 36,
                       "textAlign": "LEFT",
                       "widgetId": "uzwagvzs73",
@@ -938,9 +1075,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "InputSealNumber",
                       "dynamicPropertyPathList": [
                         {
@@ -966,15 +1105,20 @@
                         },
                         {
                           "key": "isDisabled"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": "{{SubLotProperties.hasSealId()}}",
                       "key": "y44zml9w1i",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 64,
                       "widgetId": "288c7bftr0",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -982,11 +1126,18 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": "{{SubLotProperties.getSeal()}}"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TreeStatusSelection",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "labelTextSize"
+                        }
+                      ],
                       "displayName": "TreeSelect",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
                       "labelText": "Status",
@@ -1003,6 +1154,9 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{FormatMaterialUnitDropDowns.createStatusDropdown()}}",
@@ -1010,19 +1164,22 @@
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "hy6vaaprzv",
-                      "labelTextSize": "PARAGRAPH2",
+                      "labelTextSize": "0.75rem",
                       "isRequired": false,
                       "rightColumn": 64,
                       "widgetId": "vemukzm4l3",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "expandAll": false,
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "allowClear": false
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnCreateUnit",
                       "onClick": "{{AddSubLotProperty.run(() => GetJobResponseSubLots.run(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -1055,6 +1212,7 @@
                       "text": "Create",
                       "isDisabled": "{{(SubLotProperties.hasICCIDId()&&SubLotProperties.hasSealId())}}",
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 27,
                       "isDefaultClickDisabled": true,
                       "widgetId": "uuzj44soyu",
@@ -1064,10 +1222,12 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnSubmitUnit",
                       "onClick": "{{MutationAddInventoryActual.run(() => MutationCompletions.addInventoryActual(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -1100,6 +1260,7 @@
                       "text": "Submit",
                       "isDisabled": "{{!ValidateCreateButton.canCreate()}}",
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
                       "widgetId": "2lzpwcgu6t",
@@ -1109,11 +1270,18 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtPalletLabelTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 52,
@@ -1125,11 +1293,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Pallet Label",
                       "key": "j3qx6llvv5",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 36,
                       "textAlign": "LEFT",
                       "widgetId": "3lziiamoks",
@@ -1140,9 +1310,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "InputPalletLabel",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -1161,15 +1333,21 @@
                       ],
                       "resetOnSubmit": true,
                       "leftColumn": 0,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "w56exalohb",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "onTextChanged": "{{QueryCarrier.run()}}",
                       "rightColumn": 64,
                       "widgetId": "acka8wa199",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -1177,11 +1355,18 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtUnitStatusTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 25,
@@ -1193,11 +1378,13 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Status",
                       "key": "8cgm79iijo",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
                       "widgetId": "5aqw7dh2jq",
@@ -1208,9 +1395,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH2"
+                      "borderRadius": "0px",
+                      "fontSize": "0.75rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtSerialStatus",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1223,6 +1412,7 @@
                       "parentColumnSpace": 4.076171875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
@@ -1232,6 +1422,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{LoadBuffers.txtSerialStatus()}}",
                       "key": "8cgm79iijo",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "textAlign": "LEFT",
                       "widgetId": "qkchbyx5nw",
@@ -1242,9 +1433,11 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnOpenScanBarcodeModal",
                       "onClick": "{{showModal('modalScanBarcode')}}",
                       "buttonColor": "#03B365",
@@ -1267,6 +1460,7 @@
                       "text": "Scan Barcode",
                       "isDisabled": false,
                       "key": "z3mtk5rf53",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 47,
                       "isDefaultClickDisabled": true,
                       "widgetId": "c9ud0cq252",
@@ -1276,15 +1470,28 @@
                       "parentId": "n73kppw6a3",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
-                  "key": "ob0gz3ix3m"
+                  "key": "ob0gz3ix3m",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 481.5,
+                  "detachFromLayout": true,
+                  "widgetId": "n73kppw6a3",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "eb81pvnfzp",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "borderWidth": "0",
               "key": "56mijox8cg",
+              "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 19,
               "widgetId": "eb81pvnfzp",
@@ -1294,14 +1501,18 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "0px"
             },
             {
-              "boxShadow": "NONE",
+              "boxShadow": "none",
               "widgetName": "CtnReceivedDetails",
               "borderColor": "transparent",
               "isCanvas": true,
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 18,
@@ -1320,28 +1531,21 @@
               ],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas5",
-                  "rightColumn": 481.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "mm0vrsp053",
-                  "containerStyle": "none",
                   "topRow": 0,
                   "bottomRow": 730,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "12piaazacc",
                   "minHeight": 400,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnCompleteOrderCopy",
                       "onClick": "{{CompleteJobOrder.run(() => QueryJobOrdersWarehouse.run(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -1370,6 +1574,7 @@
                       "text": "Force Complete",
                       "isDisabled": "false",
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 47,
                       "isDefaultClickDisabled": true,
                       "widgetId": "klguarvqec",
@@ -1379,11 +1584,18 @@
                       "parentId": "mm0vrsp053",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtReceivedDetailsTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 0,
@@ -1395,11 +1607,13 @@
                       "parentColumnSpace": 8.46484375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Received Details",
                       "key": "2uyysjibks",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
                       "widgetId": "ewzi5zdgeh",
@@ -1410,9 +1624,11 @@
                       "parentId": "mm0vrsp053",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING2"
+                      "borderRadius": "0px",
+                      "fontSize": "1.125rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TableCreatedUnits",
                       "defaultPageSize": 0,
                       "columnOrder": [
@@ -1454,6 +1670,9 @@
                         },
                         {
                           "key": "primaryColumns.Pallet.computedValue"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "leftColumn": 0,
@@ -1465,7 +1684,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1473,7 +1692,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Serial",
-                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Serial))}}"
+                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Serial))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Seal": {
                           "index": 1,
@@ -1482,7 +1703,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1490,7 +1711,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Seal",
-                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Seal))}}"
+                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Seal))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "ICCID": {
                           "index": 2,
@@ -1499,7 +1722,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1507,7 +1730,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "ICCID",
-                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.ICCID))}}"
+                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.ICCID))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Status": {
                           "index": 3,
@@ -1516,7 +1741,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1524,7 +1749,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Status",
-                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}"
+                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Pallet": {
                           "index": 4,
@@ -1533,7 +1760,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1541,15 +1768,19 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Pallet",
-                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Pallet))}}"
+                          "computedValue": "{{TableCreatedUnits.sanitizedTableData.map((currentRow) => ( currentRow.Pallet))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         }
                       },
                       "delimiter": ",",
                       "key": "ouxowkmrgv",
                       "derivedColumns": {},
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
-                      "textSize": "PARAGRAPH",
+                      "textSize": "0.875rem",
                       "widgetId": "v2x36wdy8n",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": false,
                       "tableData": "{{FormatSubLotTable.formatTable()}}",
                       "isVisible": true,
@@ -1563,6 +1794,24 @@
                       "isLoading": false,
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER",
                       "columnSizeMap": {
@@ -1576,6 +1825,7 @@
                       }
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnCancelOrderEntry",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -1594,6 +1844,7 @@
                       "text": "Cancel Order Entry",
                       "isDisabled": true,
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "isDefaultClickDisabled": true,
                       "widgetId": "bdmcvg4gwi",
@@ -1603,10 +1854,12 @@
                       "parentId": "mm0vrsp053",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnCompleteOrder",
                       "onClick": "{{CompleteJobOrder.run(() => QueryJobOrdersWarehouse.run(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -1639,6 +1892,7 @@
                       "text": "Complete Order",
                       "isDisabled": "{{TableCreatedUnits.length == 0}}",
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "isDefaultClickDisabled": true,
                       "widgetId": "ogu7k4x7mx",
@@ -1648,15 +1902,28 @@
                       "parentId": "mm0vrsp053",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
-                  "key": "ob0gz3ix3m"
+                  "key": "ob0gz3ix3m",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 481.5,
+                  "detachFromLayout": true,
+                  "widgetId": "mm0vrsp053",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "12piaazacc",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "borderWidth": "0",
               "key": "56mijox8cg",
+              "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 49,
               "widgetId": "12piaazacc",
@@ -1666,9 +1933,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "ModalCreateOrder",
               "isCanvas": true,
               "displayName": "Modal",
@@ -1684,6 +1952,7 @@
               "leftColumn": 11,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas10",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -1700,31 +1969,39 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnCloseJobOrderModal",
-                      "rightColumn": 64,
                       "onClick": "{{closeModal('ModalCreateOrder')}}",
-                      "iconName": "cross",
                       "buttonColor": "#2E3D49",
                       "displayName": "Icon",
                       "iconSVG": "/static/media/icon.31d6cfe0.svg",
-                      "widgetId": "1ux4a0ifu5",
                       "topRow": 1,
                       "bottomRow": 5,
-                      "isVisible": true,
                       "type": "ICON_BUTTON_WIDGET",
-                      "version": 1,
                       "hideCard": true,
+                      "leftColumn": 56,
+                      "iconSize": 24,
+                      "key": "ssd2pr1qmy",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "1ux4a0ifu5",
+                      "isVisible": true,
+                      "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "leftColumn": 56,
-                      "borderRadius": "SHARP",
-                      "buttonVariant": "TERTIARY",
-                      "iconSize": 24,
-                      "key": "ssd2pr1qmy"
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtCreateJobOrderTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -1734,11 +2011,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Create Job Order",
                       "key": "03ynqeoade",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "tgqdxvad4i",
@@ -1749,9 +2028,11 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "SelectCreateOrderMaterial",
                       "isFilterable": true,
                       "displayName": "Select",
@@ -1776,23 +2057,30 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{FormatCreateJobOrder.getMaterialList()}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "rxxuizreaq",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 62,
                       "widgetId": "xkxp287d3w",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "onOptionChange": "{{GetOperationsRequest.run()}}"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtCurrentOperationsDefinition",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1805,6 +2093,7 @@
                       "parentColumnSpace": 11.875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -1814,6 +2103,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Operations Definition: {{LoadBuffers.txtOperationsDefinition()}}",
                       "key": "03ynqeoade",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "textAlign": "LEFT",
                       "widgetId": "hzd0wnwj3h",
@@ -1824,9 +2114,11 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtCurrentOperationsRequest",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1839,6 +2131,7 @@
                       "parentColumnSpace": 11.875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -1848,6 +2141,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Operations Request: {{LoadBuffers.txtOperationsRequest()}}",
                       "key": "03ynqeoade",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "textAlign": "LEFT",
                       "widgetId": "n23p3at1y8",
@@ -1858,9 +2152,11 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnCreateJobOrder",
                       "onClick": "{{CreateJobOrder.run(() => FormatCreateJobOrder.createdOrder(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -1892,6 +2188,7 @@
                       "text": "Create",
                       "isDisabled": "{{!FormatCreateJobOrder.canCreateOrder()}}",
                       "key": "8uum384wql",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 24,
                       "isDefaultClickDisabled": true,
                       "widgetId": "eyvxc6uat4",
@@ -1901,10 +2198,12 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOperationsPlannedQty",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1917,6 +2216,7 @@
                       "parentColumnSpace": 5.28125,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -1926,6 +2226,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Planned Qty: {{LoadBuffers.txtOperationsPlannedQty()}}",
                       "key": "03ynqeoade",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "textAlign": "LEFT",
                       "widgetId": "wocynq2aih",
@@ -1936,9 +2237,11 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "SelectCreateOrderWarehouse",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -1963,23 +2266,30 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{FormatCreateJobOrder.getWarehouseList()}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "rxxuizreaq",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 62,
                       "widgetId": "jogk4wl1uy",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "onOptionChange": "{{GetWarehouseMaterialEquipment.run()}}"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "TxtOperationsActualQty",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1992,6 +2302,7 @@
                       "parentColumnSpace": 5.28125,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -2001,6 +2312,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Actual Quantity: {{LoadBuffers.txtOperationsActualQty()}}",
                       "key": "03ynqeoade",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "textAlign": "LEFT",
                       "widgetId": "8bw4jhvdpn",
@@ -2011,9 +2323,11 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "InputOrderNumber",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -2027,13 +2341,20 @@
                       "parentColumnSpace": 5.28125,
                       "resetOnSubmit": true,
                       "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "7outu2u6rm",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 62,
                       "widgetId": "ssl7xuj8dn",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -2041,10 +2362,12 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text1",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2057,11 +2380,13 @@
                       "parentColumnSpace": 5.28125,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Order Number:",
                       "key": "03ynqeoade",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
                       "widgetId": "8jw9xpg2lz",
@@ -2072,9 +2397,11 @@
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "SelectCreateOrderOperationsSeg",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -2094,6 +2421,9 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{LoadBuffers.txtOperationsSegment()}}",
@@ -2101,18 +2431,22 @@
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "8go67yligu",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 62,
                       "widgetId": "e1ru2hldcg",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "ga5o1bg5i9",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
                   "key": "ffci75jh2w",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 97.828125,
                   "detachFromLayout": true,
                   "widgetId": "ga5o1bg5i9",
@@ -2120,11 +2454,13 @@
                   "version": 1,
                   "parentId": "tb1cpbtznl",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "qumcp7j37k",
               "height": 674,
+              "labelTextSize": "0.875rem",
               "rightColumn": 35,
               "detachFromLayout": true,
               "widgetId": "tb1cpbtznl",
@@ -2134,9 +2470,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 350
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalScanBarcode",
               "isCanvas": true,
               "displayName": "Modal",
@@ -2152,6 +2490,7 @@
               "leftColumn": -2,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas11",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -2168,6 +2507,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "InputUnitDetailsBarcode",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -2193,16 +2533,21 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "regex"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "y44zml9w1i",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "onTextChanged": "",
                       "rightColumn": 64,
                       "widgetId": "0syn75fhsl",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -2211,11 +2556,18 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "regex": "{{LoadBuffers.inputSerialMask()}}",
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "titleInputBarcode",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -2225,11 +2577,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Input Barcode",
                       "key": "8cgm79iijo",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "mnqw82rxbd",
@@ -2240,9 +2594,11 @@
                       "parentId": "don9rhxpw9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnCloseScanBarcodeModal",
                       "onClick": "{{closeModal('modalScanBarcode')}}",
                       "buttonColor": "#03B365",
@@ -2257,6 +2613,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "z3mtk5rf53",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 16,
                       "isDefaultClickDisabled": true,
                       "widgetId": "5byng5jhy9",
@@ -2267,10 +2624,12 @@
                       "parentId": "don9rhxpw9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnConfirmBarcode",
                       "onClick": "{{GetSubLot.getSubLot()}}",
                       "buttonColor": "#03B365",
@@ -2302,6 +2661,7 @@
                       "text": "Submit",
                       "isDisabled": "{{!InputUnitDetailsBarcode.isValid || InputUnitDetailsBarcode.text == \"\"}}",
                       "key": "z3mtk5rf53",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 36,
                       "isDefaultClickDisabled": true,
                       "widgetId": "mgjp5xc16b",
@@ -2311,12 +2671,14 @@
                       "parentId": "don9rhxpw9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
                   "isDisabled": false,
                   "key": "t8bs13f7qi",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 97.828125,
                   "detachFromLayout": true,
                   "widgetId": "don9rhxpw9",
@@ -2324,11 +2686,13 @@
                   "version": 1,
                   "parentId": "u0dpfn01ps",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "84r8lda52h",
               "height": 176,
+              "labelTextSize": "0.875rem",
               "rightColumn": 22,
               "detachFromLayout": true,
               "widgetId": "u0dpfn01ps",
@@ -2338,9 +2702,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 346
             },
             {
+              "boxShadow": "none",
               "widgetName": "BtnLoadOrders",
               "onClick": "{{GetUserSites.run()}}",
               "buttonColor": "#03B365",
@@ -2364,6 +2730,7 @@
               "text": "Load Sites",
               "isDisabled": false,
               "key": "khhzqnxq0a",
+              "labelTextSize": "0.875rem",
               "rightColumn": 49,
               "isDefaultClickDisabled": true,
               "widgetId": "qg0o6swpfu",
@@ -2373,10 +2740,12 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalListOrders",
               "isCanvas": true,
               "displayName": "Modal",
@@ -2392,6 +2761,7 @@
               "leftColumn": 18,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas12",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -2408,6 +2778,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnOpenOrderModal",
                       "onClick": "{{GetWarehouses.run(() => showModal('ModalCreateOrder'), () => {})}}",
                       "buttonColor": "#03B365",
@@ -2430,6 +2801,7 @@
                       "text": "Create New",
                       "isDisabled": false,
                       "key": "svynilw5vi",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 54,
                       "isDefaultClickDisabled": true,
                       "widgetId": "mcmfh2qcdq",
@@ -2439,6 +2811,7 @@
                       "parentId": "7u1rrx2rp7",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -2732,6 +3105,7 @@
                           "fontSize": "PARAGRAPH"
                         }
                       },
+                      "boxShadow": "none",
                       "widgetName": "ListOrders",
                       "listData": "{{QueryJobOrdersWarehouse.data.data.queryJobOrder}}",
                       "isCanvas": true,
@@ -2773,12 +3147,16 @@
                         },
                         {
                           "key": "template.Text3Copy.text"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "gridType": "vertical",
                       "enhancements": true,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas7Copy",
                           "displayName": "Canvas",
                           "topRow": 0,
@@ -2795,11 +3173,16 @@
                           "leftColumn": 0,
                           "children": [
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container1Copy",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 0,
@@ -2813,6 +3196,8 @@
                               "leftColumn": 0,
                               "children": [
                                 {
+                                  "labelTextSize": "0.875rem",
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas8Copy",
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -2831,8 +3216,10 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "borderRadius": "0px",
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtOrderListNumber",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2845,6 +3232,7 @@
                                       "parentColumnSpace": 5.1178741455078125,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 1,
                                       "dynamicBindingPathList": [
                                         {
@@ -2854,6 +3242,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Order Number: {{currentItem.name }}",
                                       "key": "2uyysjibks",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 45,
                                       "textAlign": "LEFT",
                                       "widgetId": "mk8lyx7rbn",
@@ -2895,9 +3284,11 @@
                                       "parentId": "x076jncnuo",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtOrderListStatus",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2910,6 +3301,7 @@
                                       "parentColumnSpace": 5.1178741455078125,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 45,
                                       "dynamicBindingPathList": [
                                         {
@@ -2919,6 +3311,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "{{currentItem.dispatchStatus}}",
                                       "key": "2uyysjibks",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 61,
                                       "textAlign": "LEFT",
                                       "widgetId": "ikcu6zaqwd",
@@ -2960,9 +3353,11 @@
                                       "parentId": "x076jncnuo",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text3Copy",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2975,6 +3370,7 @@
                                       "parentColumnSpace": 12.058486938476562,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 1,
                                       "dynamicBindingPathList": [
                                         {
@@ -2984,6 +3380,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Material: {{currentItem.operationsRequest.operationsDefinition.material.code}}",
                                       "key": "gwdom5q9wq",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 43,
                                       "textAlign": "LEFT",
                                       "widgetId": "lgsdxg11ws",
@@ -3025,7 +3422,8 @@
                                       "parentId": "x076jncnuo",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
                                   "key": "ob0gz3ix3m"
@@ -3034,6 +3432,7 @@
                               "borderWidth": "0",
                               "key": "56mijox8cg",
                               "disablePropertyPane": true,
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "widgetId": "tsojiphkzf",
@@ -3043,10 +3442,11 @@
                               "parentId": "jar31fa524",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             }
                           ],
                           "key": "ob0gz3ix3m",
+                          "labelTextSize": "0.875rem",
                           "rightColumn": 135.4453125,
                           "detachFromLayout": true,
                           "widgetId": "jar31fa524",
@@ -3055,7 +3455,8 @@
                           "version": 1,
                           "parentId": "rtv5yma0kt",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "privateWidgets": {
@@ -3064,18 +3465,21 @@
                         "Text3Copy": true
                       },
                       "key": "dnnrkl3fmt",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "transparent",
                       "rightColumn": 63,
                       "onListItemClick": "{{QueryJobOrderDetails.run(() => GetJobResponseSubLots.run(), () => {})}}",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "rtv5yma0kt",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "parentId": "7u1rrx2rp7",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "IconButton1",
                       "onClick": "{{closeModal('modalListOrders')}}",
                       "buttonColor": "#2E3D49",
@@ -3090,6 +3494,7 @@
                       "iconSize": 24,
                       "isDisabled": false,
                       "key": "jjdq0xfl43",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "iconName": "cross",
                       "widgetId": "2bncy6gxeh",
@@ -3098,11 +3503,17 @@
                       "parentId": "7u1rrx2rp7",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "SHARP",
+                      "borderRadius": "0px",
                       "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtListOrdersTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -3112,11 +3523,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Job Orders",
                       "key": "q5c75y5h9n",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 27,
                       "textAlign": "LEFT",
                       "widgetId": "fz7tsu3zpi",
@@ -3127,9 +3540,11 @@
                       "parentId": "7u1rrx2rp7",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnConfirm",
                       "onClick": "{{closeModal('modalListOrders')}}",
                       "buttonColor": "#03B365",
@@ -3150,6 +3565,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "xuedb1kz1t",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "3kak105yyt",
@@ -3160,12 +3576,14 @@
                       "parentId": "7u1rrx2rp7",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
                   "isDisabled": false,
                   "key": "q29tddcf12",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 430.5,
                   "detachFromLayout": true,
                   "widgetId": "7u1rrx2rp7",
@@ -3173,11 +3591,13 @@
                   "version": 1,
                   "parentId": "srxegqguov",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "tb7j3smxep",
               "height": 736,
+              "labelTextSize": "0.875rem",
               "rightColumn": 42,
               "detachFromLayout": true,
               "widgetId": "srxegqguov",
@@ -3187,9 +3607,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 456
             },
             {
+              "boxShadow": "none",
               "widgetName": "btnSelectOrder",
               "onClick": "{{showModal('modalListOrders')}}",
               "buttonColor": "#03B365",
@@ -3212,6 +3634,7 @@
               "text": "Select\nOrder",
               "isDisabled": false,
               "key": "xuedb1kz1t",
+              "labelTextSize": "0.875rem",
               "rightColumn": 8,
               "isDefaultClickDisabled": true,
               "widgetId": "kylx8v9o3r",
@@ -3221,6 +3644,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             }

@@ -19,13 +19,14 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 57,
+          "version": 59,
           "minHeight": 1260,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
+              "boxShadow": "none",
               "widgetName": "lblSite",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.e6c93592.svg",
@@ -37,10 +38,12 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [],
               "text": "Site",
               "key": "6k6xvapc4l",
+              "labelTextSize": "0.875rem",
               "rightColumn": 2,
               "textAlign": "LEFT",
               "widgetId": "bdu8ruoy3b",
@@ -51,9 +54,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "selectSite",
               "isFilterable": false,
               "dynamicPropertyPathList": [
@@ -81,58 +86,36 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{formatOutput.formatUserSites()}}",
               "isDisabled": false,
               "key": "0y01k4tj6l",
+              "labelTextSize": "0.875rem",
               "isRequired": true,
               "rightColumn": 14,
               "widgetId": "4rozhn4xmj",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "label": "",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{\nHandleSelects.siteChange(selectSite.selectedOptionValue)}}"
             },
             {
-              "widgetName": "JobOrderTable",
-              "defaultPageSize": 0,
-              "columnOrder": [
-                "id",
-                "name",
-                "dispatchStatus",
-                "materialCode",
-                "operationsRequestCode",
-                "JobOrderQuantity",
-                "OperationsRequestQuantity",
-                "ActualProducedQuantity",
-                "TargetQuantity"
-              ],
+              "boxShadow": "none",
               "isVisibleDownload": true,
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onRowSelected"
-                }
-              ],
-              "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
               "topRow": 17,
-              "bottomRow": 85,
               "isSortable": true,
-              "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
-              "defaultSelectedRow": "0",
-              "hideCard": false,
               "animateLoading": true,
-              "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [
-                {
-                  "key": "onRowSelected"
-                }
-              ],
               "dynamicBindingPathList": [
                 {
                   "key": "tableData"
@@ -163,196 +146,38 @@
                 },
                 {
                   "key": "primaryColumns.TargetQuantity.computedValue"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "leftColumn": 0,
-              "primaryColumns": {
-                "id": {
-                  "index": 0,
-                  "width": 150,
-                  "id": "id",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "id",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
-                  "cellBackground": ""
-                },
-                "name": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "name",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "name",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
-                  "cellBackground": ""
-                },
-                "materialCode": {
-                  "index": 3,
-                  "width": 150,
-                  "id": "materialCode",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "materialCode",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}",
-                  "cellBackground": ""
-                },
-                "operationsRequestCode": {
-                  "index": 4,
-                  "width": 150,
-                  "id": "operationsRequestCode",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "operationsRequestCode",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.operationsRequestCode))}}",
-                  "cellBackground": ""
-                },
-                "JobOrderQuantity": {
-                  "index": 5,
-                  "width": 150,
-                  "id": "JobOrderQuantity",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "JobOrderQuantity",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.JobOrderQuantity))}}",
-                  "cellBackground": ""
-                },
-                "OperationsRequestQuantity": {
-                  "index": 6,
-                  "width": 150,
-                  "id": "OperationsRequestQuantity",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "OperationsRequestQuantity",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.OperationsRequestQuantity))}}",
-                  "cellBackground": ""
-                },
-                "ActualProducedQuantity": {
-                  "index": 7,
-                  "width": 150,
-                  "id": "ActualProducedQuantity",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "ActualProducedQuantity",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.ActualProducedQuantity))}}",
-                  "cellBackground": ""
-                },
-                "dispatchStatus": {
-                  "index": 2,
-                  "width": 150,
-                  "id": "dispatchStatus",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "dispatchStatus",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus))}}",
-                  "cellBackground": ""
-                },
-                "TargetQuantity": {
-                  "index": 8,
-                  "width": 150,
-                  "id": "TargetQuantity",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "TargetQuantity",
-                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.TargetQuantity))}}",
-                  "cellBackground": ""
-                }
-              },
               "delimiter": ",",
-              "onRowSelected": "{{showModal(\"JobOrderDetailModal\");QueryJobResponses.run();storeValue(\"selectedJobOrderStatus\",JobOrderTable.selectedRow.dispatchStatus)}}",
-              "key": "ykoe45p12d",
-              "derivedColumns": {},
-              "rightColumn": 64,
-              "textSize": "PARAGRAPH",
-              "widgetId": "h01ky539a6",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
-              "tableData": "{{formatOutput.formatJobOrderTable()}}",
               "isVisible": true,
-              "label": "Data",
-              "searchKey": "",
               "enableClientSideSearch": true,
               "version": 3,
               "totalRecordsCount": 0,
-              "parentId": "0",
-              "renderMode": "CANVAS",
               "isLoading": false,
-              "horizontalAlignment": "LEFT",
-              "isVisibleSearch": true,
-              "isVisiblePagination": true,
-              "cellBackground": "",
-              "verticalAlignment": "CENTER",
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                }
+              },
+              "borderRadius": "0px",
               "columnSizeMap": {
                 "task": 245,
                 "step": 62,
@@ -361,9 +186,238 @@
                 "OperationsRequestQuantity": 124,
                 "id": 89,
                 "dispatchStatus": 124
-              }
+              },
+              "widgetName": "JobOrderTable",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "name",
+                "dispatchStatus",
+                "materialCode",
+                "operationsRequestCode",
+                "JobOrderQuantity",
+                "OperationsRequestQuantity",
+                "ActualProducedQuantity",
+                "TargetQuantity"
+              ],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "displayName": "Table",
+              "bottomRow": 85,
+              "parentRowSpace": 10,
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "materialCode": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "materialCode",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "materialCode",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "operationsRequestCode": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "operationsRequestCode",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "operationsRequestCode",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.operationsRequestCode))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "JobOrderQuantity": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "JobOrderQuantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "JobOrderQuantity",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.JobOrderQuantity))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "OperationsRequestQuantity": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "OperationsRequestQuantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "OperationsRequestQuantity",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.OperationsRequestQuantity))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "ActualProducedQuantity": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "ActualProducedQuantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ActualProducedQuantity",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.ActualProducedQuantity))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "dispatchStatus": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "dispatchStatus",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "dispatchStatus",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "TargetQuantity": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "TargetQuantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "TargetQuantity",
+                  "computedValue": "{{JobOrderTable.sanitizedTableData.map((currentRow) => ( currentRow.TargetQuantity))}}",
+                  "cellBackground": "",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                }
+              },
+              "onRowSelected": "{{showModal(\"JobOrderDetailModal\");QueryJobResponses.run();storeValue(\"selectedJobOrderStatus\",JobOrderTable.selectedRow.dispatchStatus)}}",
+              "key": "ykoe45p12d",
+              "derivedColumns": {},
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "textSize": "0.875rem",
+              "widgetId": "h01ky539a6",
+              "tableData": "{{formatOutput.formatJobOrderTable()}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "cellBackground": "",
+              "verticalAlignment": "CENTER"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Button1",
               "onClick": "{{GetUserSites.run();queryPerson.run();queryOperationsDefinition.run()}}",
               "buttonColor": "#03B365",
@@ -391,6 +445,7 @@
               "text": "Load",
               "isDisabled": false,
               "key": "tftguq2n1o",
+              "labelTextSize": "0.875rem",
               "rightColumn": 49,
               "isDefaultClickDisabled": true,
               "widgetId": "hx42rlsnhe",
@@ -400,10 +455,12 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             },
             {
+              "boxShadow": "none",
               "widgetName": "JobOrderDetailModal",
               "isCanvas": true,
               "displayName": "Modal",
@@ -419,29 +476,22 @@
               "leftColumn": 25,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas1",
-                  "rightColumn": 430.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "mp51o23ek4",
                   "topRow": 0,
                   "bottomRow": 1060,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "zghbybfsoi",
                   "shouldScrollContents": false,
                   "minHeight": 1036,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "IconButton1",
                       "onClick": "{{closeModal('JobOrderDetailModal')}}",
                       "buttonColor": "#2E3D49",
@@ -456,6 +506,7 @@
                       "iconSize": 24,
                       "isDisabled": false,
                       "key": "vk30fj8ywf",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "iconName": "cross",
                       "widgetId": "04atzqkl2f",
@@ -464,11 +515,17 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "SHARP",
+                      "borderRadius": "0px",
                       "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text1",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -478,12 +535,14 @@
                       "animateLoading": true,
                       "overflow": "NONE",
                       "dynamicTriggerPathList": [],
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Job Order Detail",
                       "key": "geljtvvek3",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
                       "widgetId": "mqo30tnxxd",
@@ -494,9 +553,11 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button2",
                       "onClick": "{{closeModal('JobOrderDetailModal')}}",
                       "buttonColor": "#03B365",
@@ -511,6 +572,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "w0td594yvr",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 51,
                       "isDefaultClickDisabled": true,
                       "widgetId": "40v24sxxne",
@@ -521,10 +583,12 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button3",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -538,6 +602,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "w0td594yvr",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "o72yt3sfr5",
@@ -548,10 +613,12 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button4",
                       "onClick": "{{CompleteOrder.run(() => {showAlert('Order completed!','success');QueryJobOrders.run();storeValue(\"selectedJobOrderStatus\",CompleteOrder.data.data.updateJobOrder.jobOrder[0].dispatchStatus)}, () => showAlert('Fail to complete order.','error'))}}",
                       "buttonColor": "#03B365",
@@ -586,6 +653,7 @@
                       "text": "Complete Order",
                       "isDisabled": "{{HandleSelects.handleCompleteOrderDisability()}}",
                       "key": "w0td594yvr",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 17,
                       "isDefaultClickDisabled": true,
                       "widgetId": "4dr8cwoocy",
@@ -595,10 +663,12 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button5",
                       "onClick": "{{CloseOrder.run(() => {showAlert('Order closed!','success');QueryJobOrders.run();storeValue(\"selectedJobOrderStatus\",CloseOrder.data.data.updateJobOrder.jobOrder[0].dispatchStatus)}, () => showAlert('Fail to close order.','error'))}}",
                       "buttonColor": "#03B365",
@@ -633,6 +703,7 @@
                       "text": "Close Order",
                       "isDisabled": "{{HandleSelects.handleCloseOrderDisability()}}",
                       "key": "w0td594yvr",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 33,
                       "isDefaultClickDisabled": true,
                       "widgetId": "mo2eap05iw",
@@ -642,10 +713,12 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button6",
                       "onClick": "{{ReopenOrder.run(() => {showAlert('Order reopened!','success');QueryJobOrders.run();storeValue(\"selectedJobOrderStatus\",ReopenOrder.data.data.updateJobOrder.jobOrder[0].dispatchStatus)}, () => showAlert('Fail to re-open order.','error'))}}",
                       "buttonColor": "#03B365",
@@ -680,6 +753,7 @@
                       "text": "Re-open Order",
                       "isDisabled": "{{HandleSelects.handleReopenOrderDisability()}}",
                       "key": "w0td594yvr",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 49,
                       "isDefaultClickDisabled": true,
                       "widgetId": "20tw1rf5nx",
@@ -689,6 +763,7 @@
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -850,7 +925,7 @@
                         },
                         "Text6": {
                           "isVisible": true,
-                          "text": "{{JobResponseList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Dutarion:' + currentItem.actualDuration;\n              })();\n            })}}",
+                          "text": "{{JobResponseList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Duration:' + currentItem.actualDuration;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -909,6 +984,7 @@
                           }
                         }
                       },
+                      "boxShadow": "none",
                       "widgetName": "JobResponseList",
                       "listData": "{{QueryJobResponses.data.data.getJobOrder.jobResponses}}",
                       "isCanvas": true,
@@ -948,12 +1024,16 @@
                         },
                         {
                           "key": "template.Text6.text"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "gridType": "vertical",
                       "enhancements": true,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
@@ -970,11 +1050,16 @@
                           "leftColumn": 0,
                           "children": [
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container1",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 0,
@@ -988,6 +1073,8 @@
                               "leftColumn": 0,
                               "children": [
                                 {
+                                  "labelTextSize": "0.875rem",
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas3",
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -1006,8 +1093,10 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "borderRadius": "0px",
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text3",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1018,6 +1107,7 @@
                                       "animateLoading": true,
                                       "overflow": "NONE",
                                       "dynamicTriggerPathList": [],
+                                      "fontFamily": "System Default",
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "text"
@@ -1028,6 +1118,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "{{currentItem.id}}",
                                       "key": "geljtvvek3",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 13,
                                       "textAlign": "LEFT",
                                       "widgetId": "r1sbsk4hun",
@@ -1072,10 +1163,12 @@
                                       "parentId": "fb1e5d2rjq",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH",
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem",
                                       "textStyle": "BODY"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text4",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1088,6 +1181,7 @@
                                       "overflow": "NONE",
                                       "parentColumnSpace": 5.581835937499999,
                                       "dynamicTriggerPathList": [],
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1098,6 +1192,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Start DateTime:{{currentItem.startDateTime}}",
                                       "key": "2pueg5gy52",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 61,
                                       "textAlign": "LEFT",
                                       "widgetId": "47wwyu43qw",
@@ -1139,9 +1234,11 @@
                                       "parentId": "fb1e5d2rjq",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text5",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1154,6 +1251,7 @@
                                       "overflow": "NONE",
                                       "parentColumnSpace": 5.581835937499999,
                                       "dynamicTriggerPathList": [],
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1164,6 +1262,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "End DateTime:{{currentItem.endDateTime}}",
                                       "key": "2pueg5gy52",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 61,
                                       "textAlign": "LEFT",
                                       "widgetId": "8zhi1p8agc",
@@ -1205,9 +1304,11 @@
                                       "parentId": "fb1e5d2rjq",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text6",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1220,6 +1321,7 @@
                                       "overflow": "NONE",
                                       "parentColumnSpace": 5.581835937499999,
                                       "dynamicTriggerPathList": [],
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1228,8 +1330,9 @@
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "Dutarion:{{currentItem.actualDuration}}",
+                                      "text": "Duration:{{currentItem.actualDuration}}",
                                       "key": "2pueg5gy52",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 37,
                                       "textAlign": "LEFT",
                                       "widgetId": "rzrk4xw07l",
@@ -1271,7 +1374,8 @@
                                       "parentId": "fb1e5d2rjq",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
                                   "key": "hj3rlrrp6n"
@@ -1280,6 +1384,7 @@
                               "borderWidth": "0",
                               "key": "n93of7oved",
                               "disablePropertyPane": true,
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "widgetId": "ic6ld2rk1r",
@@ -1289,10 +1394,11 @@
                               "parentId": "cc1gkrxaho",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             }
                           ],
                           "key": "hj3rlrrp6n",
+                          "labelTextSize": "0.875rem",
                           "rightColumn": 367.5,
                           "detachFromLayout": true,
                           "widgetId": "cc1gkrxaho",
@@ -1301,7 +1407,8 @@
                           "version": 1,
                           "parentId": "5gyhlt0dlg",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "privateWidgets": {
@@ -1311,17 +1418,21 @@
                         "Text6": true
                       },
                       "key": "d4klyxloxy",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "transparent",
                       "rightColumn": 25,
                       "onListItemClick": "",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "5gyhlt0dlg",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Tabs1",
                       "isCanvas": true,
                       "displayName": "Tabs",
@@ -1336,10 +1447,15 @@
                       "parentColumnSpace": 17.03125,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 25,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "children": [
                         {
                           "tabId": "tab1",
+                          "boxShadow": "none",
                           "widgetName": "Canvas4",
                           "displayName": "Canvas",
                           "topRow": 0,
@@ -1356,6 +1472,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
@@ -1389,6 +1506,9 @@
                                 },
                                 {
                                   "key": "primaryColumns.name.computedValue"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "leftColumn": 0,
@@ -1400,7 +1520,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1408,7 +1528,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "quantity",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "quantityUoM": {
                                   "index": 2,
@@ -1417,7 +1539,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1425,7 +1547,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "quantityUoM",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.quantityUoM))}}"
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.quantityUoM))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "name": {
                                   "index": 0,
@@ -1434,7 +1558,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1442,15 +1566,19 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "name",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 }
                               },
                               "delimiter": ",",
                               "key": "gt9j2oc1gc",
                               "derivedColumns": {},
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 62,
-                              "textSize": "PARAGRAPH",
+                              "textSize": "0.875rem",
                               "widgetId": "ol506jw5k2",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": true,
                               "tableData": "{{formatOutput.formatPersonnelOutput()}}",
                               "isVisible": true,
@@ -1464,6 +1592,24 @@
                               "isLoading": false,
                               "horizontalAlignment": "LEFT",
                               "isVisibleSearch": true,
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "menuButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "iconButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "borderRadius": "0px",
                               "isVisiblePagination": true,
                               "verticalAlignment": "CENTER",
                               "columnSizeMap": {
@@ -1475,6 +1621,7 @@
                           ],
                           "isDisabled": false,
                           "key": "hj3rlrrp6n",
+                          "labelTextSize": "0.875rem",
                           "tabName": "Personnel Actual",
                           "rightColumn": 408.75,
                           "detachFromLayout": true,
@@ -1483,10 +1630,12 @@
                           "version": 1,
                           "parentId": "ujdd3krmnm",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         },
                         {
                           "tabId": "tab2",
+                          "boxShadow": "none",
                           "widgetName": "Canvas5",
                           "displayName": "Canvas",
                           "topRow": 0,
@@ -1503,6 +1652,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Table2",
                               "defaultPageSize": 0,
                               "columnOrder": [
@@ -1539,6 +1689,9 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "leftColumn": 0,
@@ -1550,7 +1703,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1560,7 +1713,9 @@
                                   "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "task": {
                                   "index": 1,
@@ -1569,7 +1724,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1579,7 +1734,9 @@
                                   "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "status": {
                                   "index": 2,
@@ -1588,7 +1745,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1598,7 +1755,9 @@
                                   "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "action": {
                                   "index": 3,
@@ -1607,7 +1766,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "button",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1619,15 +1778,19 @@
                                   "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 }
                               },
                               "delimiter": ",",
                               "key": "zuzhug7mq2",
                               "derivedColumns": {},
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 64,
-                              "textSize": "PARAGRAPH",
+                              "textSize": "0.875rem",
                               "widgetId": "opdak7zbcs",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": true,
                               "tableData": "{{formatOutput.formatMaterialActualOutput()}}",
                               "isVisible": true,
@@ -1641,6 +1804,24 @@
                               "isLoading": false,
                               "horizontalAlignment": "LEFT",
                               "isVisibleSearch": true,
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "menuButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "iconButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "borderRadius": "0px",
                               "isVisiblePagination": true,
                               "verticalAlignment": "CENTER",
                               "columnSizeMap": {
@@ -1652,6 +1833,7 @@
                           ],
                           "isDisabled": false,
                           "key": "hj3rlrrp6n",
+                          "labelTextSize": "0.875rem",
                           "tabName": "Material Actual",
                           "rightColumn": 408.75,
                           "detachFromLayout": true,
@@ -1660,10 +1842,12 @@
                           "version": 1,
                           "parentId": "ujdd3krmnm",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         },
                         {
                           "tabId": "tabsdqnb8yzlh",
+                          "boxShadow": "none",
                           "widgetName": "Canvas6",
                           "displayName": "Canvas",
                           "topRow": 1,
@@ -1679,6 +1863,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Table3",
                               "defaultPageSize": 0,
                               "columnOrder": [
@@ -1715,6 +1900,9 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "leftColumn": 0,
@@ -1726,7 +1914,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1736,7 +1924,9 @@
                                   "computedValue": "{{Table3.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "task": {
                                   "index": 1,
@@ -1745,7 +1935,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1755,7 +1945,9 @@
                                   "computedValue": "{{Table3.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "status": {
                                   "index": 2,
@@ -1764,7 +1956,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1774,7 +1966,9 @@
                                   "computedValue": "{{Table3.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "action": {
                                   "index": 3,
@@ -1783,7 +1977,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "button",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1795,15 +1989,19 @@
                                   "computedValue": "{{Table3.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 }
                               },
                               "delimiter": ",",
                               "key": "zuzhug7mq2",
                               "derivedColumns": {},
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 64,
-                              "textSize": "PARAGRAPH",
+                              "textSize": "0.875rem",
                               "widgetId": "j7chlom343",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": true,
                               "tableData": "{{formatOutput.formatEquipmentActualOutput()}}",
                               "isVisible": true,
@@ -1817,6 +2015,24 @@
                               "isLoading": false,
                               "horizontalAlignment": "LEFT",
                               "isVisibleSearch": true,
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "menuButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "iconButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "borderRadius": "0px",
                               "isVisiblePagination": true,
                               "verticalAlignment": "CENTER",
                               "columnSizeMap": {
@@ -1827,6 +2043,7 @@
                             }
                           ],
                           "key": "wzwa8rbafx",
+                          "labelTextSize": "0.875rem",
                           "tabName": "Equipment Actual",
                           "rightColumn": 630.15625,
                           "detachFromLayout": true,
@@ -1836,10 +2053,12 @@
                           "version": 1,
                           "parentId": "ujdd3krmnm",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         },
                         {
                           "tabId": "tabdvn5yzap1a",
+                          "boxShadow": "none",
                           "widgetName": "Canvas7",
                           "displayName": "Canvas",
                           "topRow": 1,
@@ -1855,6 +2074,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text7",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1867,6 +2087,7 @@
                               "overflow": "NONE",
                               "parentColumnSpace": 8.9673095703125,
                               "dynamicTriggerPathList": [],
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1875,8 +2096,9 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Previous Start DateTime:{{JobResponseList.selectedItem.star}}",
+                              "text": "Previous Start DateTime:{{JobResponseList.selectedItem.startDateTime}}",
                               "key": "2pueg5gy52",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "u1o0gar6pc",
@@ -1887,9 +2109,11 @@
                               "parentId": "8yejdfzyv8",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text8",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1902,12 +2126,14 @@
                               "overflow": "NONE",
                               "parentColumnSpace": 8.9673095703125,
                               "dynamicTriggerPathList": [],
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
                               "text": "New Start DateTime:",
                               "key": "2pueg5gy52",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 18,
                               "textAlign": "LEFT",
                               "widgetId": "b7s6xiau8u",
@@ -1918,9 +2144,11 @@
                               "parentId": "8yejdfzyv8",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "StartDatePicker",
                               "minDate": "1920-12-31T18:30:00.000Z",
                               "dateFormat": "LLL",
@@ -1944,14 +2172,19 @@
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultDate"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "isDisabled": false,
                               "key": "kf0stmqbox",
+                              "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 41,
                               "defaultDate": "{{JobResponseList.selectedItem.startDateTime}}",
                               "widgetId": "ox9qc7r0ql",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
                               "datePickerType": "DATE_PICKER",
                               "label": "",
@@ -1960,11 +2193,13 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "timePrecision": "minute",
+                              "borderRadius": "0px",
                               "firstDayOfWeek": 0,
                               "closeOnSelection": true,
                               "maxDate": "2121-12-31T18:29:00.000Z"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text9",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1977,6 +2212,7 @@
                               "overflow": "NONE",
                               "parentColumnSpace": 8.9673095703125,
                               "dynamicTriggerPathList": [],
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1987,6 +2223,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Previous End DateTime:{{JobResponseList.selectedItem.endDateTime}}",
                               "key": "2pueg5gy52",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "6k1bbrzgph",
@@ -1997,9 +2234,11 @@
                               "parentId": "8yejdfzyv8",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text10",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2012,12 +2251,14 @@
                               "overflow": "NONE",
                               "parentColumnSpace": 8.9673095703125,
                               "dynamicTriggerPathList": [],
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
                               "text": "New End DateTime:",
                               "key": "2pueg5gy52",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 18,
                               "textAlign": "LEFT",
                               "widgetId": "esfc75e8vi",
@@ -2028,9 +2269,11 @@
                               "parentId": "8yejdfzyv8",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "EndDatePicker",
                               "minDate": "1920-12-31T18:30:00.000Z",
                               "dateFormat": "LLL",
@@ -2054,14 +2297,19 @@
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultDate"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "isDisabled": false,
                               "key": "kf0stmqbox",
+                              "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 42,
                               "defaultDate": "{{JobResponseList.selectedItem.endDateTime}}",
                               "widgetId": "56ptmk6km9",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
                               "datePickerType": "DATE_PICKER",
                               "label": "",
@@ -2070,11 +2318,13 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "timePrecision": "minute",
+                              "borderRadius": "0px",
                               "firstDayOfWeek": 0,
                               "closeOnSelection": true,
                               "maxDate": "2121-12-31T18:29:00.000Z"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button7",
                               "onClick": "{{UpdateJobResponseDateTime.run(() => QueryJobResponses.run(), () => showAlert('Fail to update.','error'))}}",
                               "buttonColor": "#03B365",
@@ -2097,6 +2347,7 @@
                               "text": "Update",
                               "isDisabled": false,
                               "key": "skqqd3igk9",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 61,
                               "isDefaultClickDisabled": true,
                               "widgetId": "2guj0brbqo",
@@ -2106,11 +2357,13 @@
                               "parentId": "8yejdfzyv8",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             }
                           ],
                           "key": "wzwa8rbafx",
+                          "labelTextSize": "0.875rem",
                           "tabName": "Edit JobResponse",
                           "rightColumn": 630.15625,
                           "detachFromLayout": true,
@@ -2120,12 +2373,15 @@
                           "version": 1,
                           "parentId": "ujdd3krmnm",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "key": "ryce9vu4s9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "widgetId": "ujdd3krmnm",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "Personnel Actual",
                       "shouldShowTabs": true,
                       "tabsObj": {
@@ -2162,15 +2418,27 @@
                       "version": 3,
                       "parentId": "mp51o23ek4",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
-                  "key": "hj3rlrrp6n"
+                  "key": "hj3rlrrp6n",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 430.5,
+                  "detachFromLayout": true,
+                  "widgetId": "mp51o23ek4",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "zghbybfsoi",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "y5k25xcyor",
               "height": 1036,
+              "labelTextSize": "0.875rem",
               "rightColumn": 49,
               "detachFromLayout": true,
               "widgetId": "zghbybfsoi",
@@ -2180,9 +2448,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 1102
             },
             {
+              "boxShadow": "none",
               "widgetName": "SelectStatus",
               "isFilterable": true,
               "dynamicPropertyPathList": [
@@ -2208,22 +2478,30 @@
                 }
               ],
               "leftColumn": 0,
-              "dynamicBindingPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                }
+              ],
               "options": "[\n  {\n    \"label\": \"ACTIVE\",\n    \"value\": \"ACTIVE\"\n  },\n  {\n    \"label\": \"CANCELED\",\n    \"value\": \"CANCELED\"\n  },\n  {\n    \"label\": \"CLOSED\",\n    \"value\": \"CLOSED\"\n  },\n  {\n    \"label\": \"COMPLETE\",\n    \"value\": \"COMPLETE\"\n  },\n  {\n    \"label\": \"CREATED\",\n    \"value\": \"CREATED\"\n  },\n  {\n    \"label\": \"PARKED\",\n    \"value\": \"PARKED\"\n  },\n  {\n    \"label\": \"PENDING\",\n    \"value\": \"PENDING\"\n  },\n  {\n    \"label\": \"RELEASED\",\n    \"value\": \"RELEASED\"\n  }\n]",
               "placeholderText": "Select option(s)",
               "isDisabled": false,
               "key": "mszfkzagc5",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 22,
               "widgetId": "h82gwrmg4i",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": ""
             },
             {
+              "boxShadow": "none",
               "widgetName": "FromDateTimePicker",
               "minDate": "1920-12-31T18:30:00.000Z",
               "dateFormat": "YYYY-MM-DDTHH:mm:ss.sssZ",
@@ -2248,13 +2526,19 @@
                 }
               ],
               "leftColumn": 22,
-              "dynamicBindingPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                }
+              ],
               "isDisabled": false,
               "key": "kf0stmqbox",
               "onDateSelected": "",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 31,
               "widgetId": "d52chn5m4c",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "datePickerType": "DATE_PICKER",
               "label": "",
@@ -2263,11 +2547,13 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "timePrecision": "None",
+              "borderRadius": "0px",
               "firstDayOfWeek": 0,
               "closeOnSelection": true,
               "maxDate": "2121-12-31T18:29:00.000Z"
             },
             {
+              "boxShadow": "none",
               "widgetName": "ToDateTimePicker",
               "minDate": "1920-12-31T18:30:00.000Z",
               "dateFormat": "YYYY-MM-DDTHH:mm:ss.sssZ",
@@ -2292,13 +2578,19 @@
                 }
               ],
               "leftColumn": 31,
-              "dynamicBindingPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                }
+              ],
               "isDisabled": false,
               "key": "kf0stmqbox",
               "onDateSelected": "",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 40,
               "widgetId": "thm261wfcl",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "datePickerType": "DATE_PICKER",
               "label": "",
@@ -2307,11 +2599,13 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "timePrecision": "None",
+              "borderRadius": "0px",
               "firstDayOfWeek": 0,
               "closeOnSelection": true,
               "maxDate": "2121-12-31T18:29:00.000Z"
             },
             {
+              "boxShadow": "none",
               "widgetName": "PersonSelect",
               "isFilterable": true,
               "dynamicPropertyPathList": [
@@ -2341,6 +2635,9 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "labelPosition": "Left",
@@ -2348,18 +2645,22 @@
               "placeholderText": "Select option(s)",
               "isDisabled": false,
               "key": "jgarwtb6mo",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 22,
               "widgetId": "aj0diipozx",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": ""
             },
             {
+              "boxShadow": "none",
               "widgetName": "OperationsDefinitionSelect",
               "isFilterable": true,
               "dynamicPropertyPathList": [
@@ -2389,6 +2690,9 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "labelPosition": "Left",
@@ -2396,18 +2700,22 @@
               "placeholderText": "Select option",
               "isDisabled": false,
               "key": "fcy6nwe5uw",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 22,
               "widgetId": "3lsgonjcho",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{queryOperationsSegment.run();resetWidget(OperationsSegmentSelect)}}"
             },
             {
+              "boxShadow": "none",
               "widgetName": "OperationsSegmentSelect",
               "isFilterable": true,
               "dynamicPropertyPathList": [
@@ -2437,6 +2745,9 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "labelPosition": "Left",
@@ -2444,18 +2755,22 @@
               "placeholderText": "Select option(s)",
               "isDisabled": false,
               "key": "h6cpcb5kj5",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 42,
               "widgetId": "22p6kzsu74",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": ""
             },
             {
+              "boxShadow": "none",
               "widgetName": "EquipmentTreeSelect",
               "dynamicPropertyPathList": [
                 {
@@ -2484,6 +2799,9 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "labelPosition": "Left",
@@ -2491,9 +2809,11 @@
               "placeholderText": "Select option(s)",
               "isDisabled": false,
               "key": "j2iub4lqtq",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 40,
               "widgetId": "ov09hinxk6",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "expandAll": false,
@@ -2501,10 +2821,12 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "",
               "allowClear": false
             },
             {
+              "boxShadow": "none",
               "widgetName": "Button8",
               "onClick": "{{QueryJobOrders.run()}}",
               "buttonColor": "#03B365",
@@ -2527,6 +2849,7 @@
               "text": "Search",
               "isDisabled": false,
               "key": "qetdmp9s22",
+              "labelTextSize": "0.875rem",
               "rightColumn": 59,
               "isDefaultClickDisabled": true,
               "widgetId": "wnivjmjcad",
@@ -2536,6 +2859,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             }

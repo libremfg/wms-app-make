@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ProduceMaterials",
+    "name": "QueryPartners",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -24,7 +24,8 @@
         }
       ],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\"input\": FormatConsumeProduceInputs.formatProduceMaterialInput()\n\t\t},\n    query: `\nmutation ProduceMaterial($input:[ProduceMaterialInput!]!) {\n  produceMaterial(input:$input) {\n    material{code}\n\t\tstatus{code}\n    quantity\n    materialUse\n\t\tmaterialSubLot{code}\n  }\n}\n    `\n})\n}}",
+      "queryParameters": [],
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\n\t\t},\n    query: `\nquery {\n  queryPartner {\n    value:id\n    label:name\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -35,7 +36,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -45,14 +46,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\t\"input\": FormatConsumeProduceInputs.formatProduceMaterialInput()\n\t\t},\n    query: `\nmutation ProduceMaterial($input:[ProduceMaterialInput!]!) {\n  produceMaterial(input:$input) {\n    material{code}\n\t\tstatus{code}\n    quantity\n    materialUse\n\t\tmaterialSubLot{code}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\t\n\t\t},\n    query: `\nquery {\n  queryPartner {\n    value:id\n    label:name\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Make Stuff_ProduceMaterials",
+  "id": "Make Stuff_QueryPartners",
   "deleted": false,
-  "gitSyncId": "61db6bfa6bd5757f166cc619_624f9351457aa64da9e0225f"
+  "gitSyncId": "61db6bfa6bd5757f166cc619_629d9132aeaa1802518a7f90"
 }

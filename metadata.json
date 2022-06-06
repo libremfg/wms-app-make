@@ -1,6 +1,18 @@
 {
   "clientSchemaVersion": 1,
   "serverSchemaVersion": 4,
+  "pageOrder": [
+    "ADYEN Staging",
+    "Produce Terminals",
+    "Make Stuff",
+    "Job Order Manager"
+  ],
+  "publishedPageOrder": [
+    "ADYEN Staging",
+    "Produce Terminals",
+    "Make Stuff",
+    "Job Order Manager"
+  ],
   "publishedDefaultPageName": "ADYEN Staging",
   "unpublishedDefaultPageName": "ADYEN Staging",
   "invisibleActionFields": {
@@ -528,6 +540,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Make Stuff_QueryPartners": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
     "Make Stuff_SubLotProperties.addPropeties": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -796,21 +812,6 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
-  },
-  "publishedTheme": {
-    "name": "Classic",
-    "displayName": "Classic",
-    "isSystemTheme": true,
-    "deleted": false,
-    "policies": [
-      {
-        "permission": "read:themes",
-        "users": [
-          "anonymousUser"
-        ],
-        "groups": []
-      }
-    ]
   },
   "publishedLayoutmongoEscapedWidgets": {},
   "unpublishedLayoutmongoEscapedWidgets": {},
